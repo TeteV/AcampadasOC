@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Zona extends Migration
+class Persona extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class Zona extends Migration
      */
     public function up()
     {
-        Schema::create('zonas', function (Blueprint $table) {
+        Schema::create('personas', function (Blueprint $table) {
             $table->id('id');
             $table->string('nombre');
+            $table->string('apellidos');
+            $table->string('dni')->unique()->notNullable();
+            $table->timestamps();
         });
     }
 

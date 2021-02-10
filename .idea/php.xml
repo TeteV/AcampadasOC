@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ChangeListManager">
-    <list default="true" id="0fb85044-f59d-476d-b07e-44128cfe35d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/AcampadasOC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AcampadasOC.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database/migrations/2021_02_09_152228_operario.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/migrations/2021_02_09_152228_operario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database/migrations/2021_02_09_152912_zona.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/migrations/2021_02_09_152912_zona.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database/migrations/2021_02_09_152957_reserva.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/migrations/2021_02_09_152957_reserva.php" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/backend/composer.json</pharConfigPath>
-    <execution />
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/backend/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/backend/vendor/doctrine/instantiator" />
@@ -131,60 +111,10 @@
       <path value="$PROJECT_DIR$/backend/vendor/theseer/tokenizer" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1oFfxKQSwfvf2BINVJaaT29XpQE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="android.sdk.path" value="$PROJECT_DIR$/../MiSDK" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../paver/CRUDLumen" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="0fb85044-f59d-476d-b07e-44128cfe35d7" name="Default Changelist" comment="" />
-      <created>1612887511550</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1612887511550</updated>
-      <workItem from="1612890625223" duration="239000" />
-      <workItem from="1612970514916" duration="2123000" />
-      <workItem from="1612973843003" duration="1657000" />
-    </task>
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="578" y="292" key="#Composer" timestamp="1612890644818">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="578" y="292" key="#Composer/0.0.1536.824@0.0.1536.824" timestamp="1612890644818" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1612972523634">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1612972523634" />
-    <state x="349" y="155" key="IDE.errors.dialog" timestamp="1612886900109">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="349" y="155" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1612886900109" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/backend/vendor/autoload.php" />
+    </phpunit_settings>
   </component>
 </project>

@@ -13,7 +13,7 @@ class Operario extends Migration
      */
     public function up()
     {
-        Schema::create('operario', function (Blueprint $table) {
+        Schema::create('operarios', function (Blueprint $table) {
             $table->id('id');
             $table->string('dni')->unique()->notNullable();
             $table->string('nombre');

@@ -13,17 +13,19 @@ class Reserva extends Migration
      */
     public function up()
     {
-        Schema::create('reserva', function (Blueprint $table) {
+        Schema::create('reservas', function (Blueprint $table) {
             $table->id('id');
-            $table->string('datos');
-            $table->string('email')->unique()->notNullable();
-            $table->string('password');
-            $table->string('api_token')->nullable();
-            $table->rememberToken();
-            $table->timestamps();
+            $table->unsignedBigInteger('id_persona')->nullable()->unsigned();
+            $table->string('fecha_entrada');
+            $table->string('fecha_salida');
+            $table->string('localizador_reserva');
+            $table->integer('num_personas');
+            $table->integer('num_vehiculos');
+            $table->string('ckeckin');
+            $table->string('fecha_checkin');
+            $table->foreign('id_persona')->references('id')->on('personas')->cascadeOnDelete();
         });
     }
-
     /**
      * Reverse the migrations.
      *
