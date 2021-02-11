@@ -1,7 +1,7 @@
 <?php
 
 
-class Prueba1
+class Prueba13
 {
 
 }
