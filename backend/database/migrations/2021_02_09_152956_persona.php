@@ -18,7 +18,6 @@ class Persona extends Migration
             $table->string('nombre');
             $table->string('apellidos');
             $table->string('dni')->unique()->notNullable();
-            $table->timestamps();
         });
     }
 

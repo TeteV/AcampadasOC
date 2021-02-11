@@ -24,6 +24,7 @@ class PersonaController extends Controller{
         $persona->nombre = $request->nombre;
         $persona->apellidos = $request->apellidos;
         $persona->dni = $request->dni;
+        $persona->save();
         return "Post has been created!";
     }
 
@@ -31,8 +32,9 @@ class PersonaController extends Controller{
     //PUT
     public function updatePost(Request $request){
         $persona = Persona::where('id', $request->id)->first();
-        $persona->id = $request->id;
-        $persona->number = $request->number;
+        $persona->nombre = $request->nombre;
+        $persona->apellidos = $request->apellidos;
+        $persona->dni = $request->dni;
         $persona->save();
         return "Post has been updated!";
     }

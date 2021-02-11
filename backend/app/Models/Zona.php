@@ -11,4 +11,6 @@ class Zona extends Model {
         'nombre'
     ];
     protected $table="zonas";
+
+    public $timestamps = false;
 }

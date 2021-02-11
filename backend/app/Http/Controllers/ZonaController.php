@@ -23,6 +23,7 @@ class ZonaController extends Controller{
     public function createPost(Request $request){
         $zona = new Zona();
         $zona->nombre = $request->nombre;
+        $zona->save();
         return "Post has been created!";
     }
 
