@@ -21,7 +21,7 @@ class Reserva extends Migration
             $table->string('localizador_reserva');
             $table->integer('num_personas');
             $table->integer('num_vehiculos');
-            $table->string('ckeckin');
+            $table->string('checkin');
             $table->string('fecha_checkin');
             $table->foreign('id_persona')->references('id')->on('personas')->cascadeOnDelete();
         });

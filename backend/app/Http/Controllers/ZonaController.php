@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 
 
 class ZonaController extends Controller{
+
     //GETTER DE TODA LA VIDA
     public function index(Request $request){
         return Zona::all();
