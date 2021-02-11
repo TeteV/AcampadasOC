@@ -16,3 +16,8 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group(['prefix' => 'api'], function () use ($router) {
+    $router->post('signin', ['as' => 'operario.store', 'uses' => 'OperarioController@signIn']);
+    $router->post('login', ['as' => 'operario.logIn', 'uses' => 'OperarioController@logIn']);
+});
