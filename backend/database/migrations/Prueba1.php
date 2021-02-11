@@ -1,7 +1,7 @@
 <?php
 
 
-class Prueba13
+class Prueba14
 {
 //hola tiburcio que tal?
 }
