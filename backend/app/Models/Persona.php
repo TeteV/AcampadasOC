@@ -11,4 +11,6 @@ class Persona extends Model {
         'nombre', 'apellidos', 'dni'
     ];
     protected $table="personas";
+
+    public $timestamps = false;
 }

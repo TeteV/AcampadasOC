@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Zona extends Model {
     protected $fillable = [
-        'id', 'nombre'
+        'nombre'
     ];
     protected $table="zonas";
 }
