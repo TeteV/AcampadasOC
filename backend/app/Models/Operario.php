@@ -2,16 +2,27 @@
 
 
 namespace App\Models;
-use Illuminate\Database\Eloquent\Model;
 
-class Operario extends Model {
+use Illuminate\Auth\Authenticatable;
+use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Laravel\Lumen\Auth\Authorizable;
+
+class Operario extends Model implements AuthenticatableContract, AuthorizableContract
+{
+    use Authenticatable, Authorizable, HasFactory;
+
+    protected $table= 'operarios';
+
     protected $fillable = [
-        'nombre', 'apellidos', 'email'
+        'dni','nombre', 'apellidos', 'email','password'
     ];
 
     protected $hidden = [
-        'password',
+        'password'
     ];
 
-    protected $table="operarios";
+
 }

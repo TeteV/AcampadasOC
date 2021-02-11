@@ -20,6 +20,12 @@ $router->get('/', function () use ($router) {
 $router->group(['prefix' => 'api'], function () use ($router) {
     $router->post('signin', ['as' => 'operario.store', 'uses' => 'OperarioController@signIn']);
     $router->post('login', ['as' => 'operario.logIn', 'uses' => 'OperarioController@logIn']);
+    //LogOut funciona mal , recoje la table users en vez de la de operarios
+    $router->post('logout', ['as' => 'logout', 'uses' =>  'OperarioController@logOut']);
+
+    $router->get('operario-id/{id}', ['as' => 'operario.show', 'uses' => 'OperarioController@getById']);
+    $router->delete('delete-operario/{id}', ['as' => 'operario.delete', 'uses' => 'OperarioController@delete']);
+    $router->put('update-operario/{id}', ['as' => 'operario.update', 'uses' => 'OperarioController@update']);
 
 // API route group
     // Matches "/api/zona"
@@ -43,15 +49,4 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->put('persona/{id}', ['as' => 'persona.updatePost', 'uses' => 'PersonaController@updatePost']);
     // Matches "/api/persona"
     $router->post('persona', ['as' => 'persona.createPost', 'uses' => 'PersonaController@createPost']);
-
-    // Matches "/api/reserva"
-    $router->get('reserva', ['as' => 'reserva', 'uses' => 'ReservaController@index']);
-    // Matches "/api/reserva/{id}"
-    $router->get('reserva/{id}', ['as' => 'reserva.show', 'uses' => 'ReservaController@show']);
-    // Matches "/api/reserva/{id}"
-    $router->delete('reserva/{id}', ['as' => 'reserva.delete', 'uses' => 'ReservaController@delete']);
-    // Matches "/api/reserva/{id}"
-    $router->put('reserva/{id}', ['as' => 'reserva.updatePost', 'uses' => 'ReservaController@updatePost']);
-    // Matches "/api/reserva"
-    $router->post('reserva', ['as' => 'reserva.createPost', 'uses' => 'ReservaController@createPost']);
 });

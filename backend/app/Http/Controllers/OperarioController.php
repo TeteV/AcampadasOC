@@ -4,13 +4,13 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\User;
-use Illuminate\Http\Request;
+use App\Models\Operario;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
-class OperarioController
+class OperarioController extends Controller
 {
     public function signIn(Request $request){
         try {
@@ -28,7 +28,7 @@ class OperarioController
         $input['password'] = Hash::make($request->password);
         if ($request->has("url_img"))
             $input["url_img"] = $this->loadImage($request->url_img);
-        User::create($input);
+        Operario::create($input);
 
         return response()->json([
             'res'=>true,
@@ -37,7 +37,7 @@ class OperarioController
     }
 
     public function logIn(Request $request){
-        $user = User::whereEmail($request->email)->first();
+        $user = Operario::whereEmail($request->email)->first();
 
         if(!is_null($user) && Hash::check($request->password, $user->password)){
             $user->api_token = Str::random(150);
@@ -45,7 +45,7 @@ class OperarioController
 
             return response()->json([
                 'res'=>true,
-                'id_user'=>$user->id,
+                'id_operario'=>$user->id,
                 'api_token'=>$user->api_token,
                 'message'=>'Ha accedido correctamente'
             ]);
@@ -57,12 +57,23 @@ class OperarioController
         }
     }
 
+    public function logOut(){
+        $user = auth()->user();
+        $user->api_token = null;
+        $user->save();
 
-    public function getById($id){
-        return User::where('id',$id)->get();
+        return response()->json([
+            'res'=>true,
+            'message'=>'Ha salido correctamente'
+        ]);
     }
 
-    public function update($dni, Request $request){
+
+    public function getById($id){
+        return Operario::where('id',$id)->get();
+    }
+
+    public function update($id, Request $request){
         try {
             $this->validate($request, [
                 'email' => "required|Regex:'^[^@]+@[^@]+\.[a-zA-Z]{2,}$'",
@@ -78,7 +89,7 @@ class OperarioController
         if ($request->has("url_img"))
             $input["url_img"] = $this->loadImage($request->url_image);
 
-        $user = User::where('dni',$dni);
+        $user = Operario::where('id',$id);
         $user->update($input);
         return response()->json([
             'res'=>true,
@@ -88,8 +99,8 @@ class OperarioController
 
 
     //DELETE
-    public function delete($dni){
-        $user = User::where('dni',$dni);
+    public function delete($id){
+        $user = Operario::where('id',$id);
         $user->delete();
         return response()->json([
             'res'=>true,
@@ -99,7 +110,7 @@ class OperarioController
 
     public function loadImage($file){
         $photoName = time().".". $file->getClientOriginalExtension();
-        $file->move(base_path("/public/user_image"),$photoName);
+        $file->move(base_path("/public/operario_image"),$photoName);
         return $photoName;
     }
 
