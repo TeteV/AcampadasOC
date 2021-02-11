@@ -17,9 +17,11 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+$router->group(['prefix' => 'api'], function () use ($router) {
+    $router->post('signin', ['as' => 'operario.store', 'uses' => 'OperarioController@signIn']);
+    $router->post('login', ['as' => 'operario.logIn', 'uses' => 'OperarioController@logIn']);
 
 // API route group
-$router->group(['prefix' => 'api'], function () use ($router) {
     // Matches "/api/zona"
     $router->get('zona', ['as' => 'zona', 'uses' => 'ZonaController@index']);
     // Matches "/api/zona/{id}"
