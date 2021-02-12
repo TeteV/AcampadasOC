@@ -3,7 +3,6 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Models\Reserva;
 use Illuminate\Http\Request;
 
@@ -17,6 +16,10 @@ class ReservaController {
     //GETTER DE UN SOLO ELEMENTO
     public function show($id){
         return Reserva::findOrFail($id);
+    }
+
+    public function showReserv($id_user){
+        return Reserva::all()->where('id_persona', $id_user);;
     }
 
     //POST/*
