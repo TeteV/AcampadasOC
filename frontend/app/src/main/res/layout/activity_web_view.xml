@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".controller.WebView">
+=======
+    tools:context=".controller.ui.WebView">
+>>>>>>> 9a3963dcde7df24a395c8c990d693f7b43e98169
 
     <WebView
         android:id="@+id/webview"
