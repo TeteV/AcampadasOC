@@ -1,0 +1,180 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0fb85044-f59d-476d-b07e-44128cfe35d7\" name=\"Default Changelist\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\">\r\n    <execution />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1oFfxKQSwfvf2BINVJaaT29XpQE\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"android.sdk.path\" value=\"$PROJECT_DIR$/../MiSDK\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"AndroidSdkUpdater\" />\r\n  </component>\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0fb85044-f59d-476d-b07e-44128cfe35d7\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1612887511550</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1612887511550</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"549\" y=\"167\" key=\"FileChooserDialogImpl\" timestamp=\"1612887705715\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"549\" y=\"167\" key=\"FileChooserDialogImpl/0.0.1536.824@0.0.1536.824\" timestamp=\"1612887705715\" />\r\n    <state x=\"349\" y=\"155\" key=\"IDE.errors.dialog\" timestamp=\"1612886900109\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"349\" y=\"155\" key=\"IDE.errors.dialog/0.0.1536.824@0.0.1536.824\" timestamp=\"1612886900109\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 0d549d28786d2a85260de7a5d7c565f2a55b539a)
++++ .idea/workspace.xml	(date 1612976794995)
+@@ -1,5 +1,23 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="BranchesTreeState">
++    <expand>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++    </expand>
++    <select />
++  </component>
+   <component name="ChangeListManager">
+     <list default="true" id="0fb85044-f59d-476d-b07e-44128cfe35d7" name="Default Changelist" comment="" />
+     <option name="SHOW_DIALOG" value="false" />
+@@ -10,7 +28,119 @@
+   <component name="ComposerSettings">
+     <execution />
+   </component>
++  <component name="PhpWorkspaceProjectConfiguration">
++    <include_path>
++      <path value="$PROJECT_DIR$/backend/vendor/doctrine/inflector" />
++      <path value="$PROJECT_DIR$/backend/vendor/doctrine/instantiator" />
++      <path value="$PROJECT_DIR$/backend/vendor/doctrine/lexer" />
++      <path value="$PROJECT_DIR$/backend/vendor/fakerphp/faker" />
++      <path value="$PROJECT_DIR$/backend/vendor/hamcrest/hamcrest-php" />
++      <path value="$PROJECT_DIR$/backend/vendor/phpoption/phpoption" />
++      <path value="$PROJECT_DIR$/backend/vendor/sebastian/cli-parser" />
++      <path value="$PROJECT_DIR$/backend/vendor/sebastian/code-unit" />
++      <path value="$PROJECT_DIR$/backend/vendor/sebastian/code-unit-reverse-lookup" />
++      <path value="$PROJECT_DIR$/backend/vendor/sebastian/comparator" />
++      <path value="$PROJECT_DIR$/backend/vendor/sebastian/complexity" />
++      <path value="$PROJECT_DIR$/backend/vendor/sebastian/diff" />
++      <path value="$PROJECT_DIR$/backend/vendor/sebastian/environment" />
++      <path value="$PROJECT_DIR$/backend/vendor/sebastian/exporter" />
++      <path value="$PROJECT_DIR$/backend/vendor/sebastian/global-state" />
++      <path value="$PROJECT_DIR$/backend/vendor/sebastian/lines-of-code" />
++      <path value="$PROJECT_DIR$/backend/vendor/sebastian/object-enumerator" />
++      <path value="$PROJECT_DIR$/backend/vendor/sebastian/object-reflector" />
++      <path value="$PROJECT_DIR$/backend/vendor/sebastian/recursion-context" />
++      <path value="$PROJECT_DIR$/backend/vendor/sebastian/resource-operations" />
++      <path value="$PROJECT_DIR$/backend/vendor/sebastian/type" />
++      <path value="$PROJECT_DIR$/backend/vendor/sebastian/version" />
++      <path value="$PROJECT_DIR$/backend/vendor/webmozart/assert" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/auth" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/broadcasting" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/bus" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/cache" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/collections" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/config" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/console" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/container" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/contracts" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/database" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/encryption" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/events" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/filesystem" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/hashing" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/http" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/log" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/macroable" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/pagination" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/pipeline" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/queue" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/session" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/support" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/testing" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/translation" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/validation" />
++      <path value="$PROJECT_DIR$/backend/vendor/illuminate/view" />
++      <path value="$PROJECT_DIR$/backend/vendor/dragonmantank/cron-expression" />
++      <path value="$PROJECT_DIR$/backend/vendor/phpdocumentor/reflection-common" />
++      <path value="$PROJECT_DIR$/backend/vendor/phpdocumentor/reflection-docblock" />
++      <path value="$PROJECT_DIR$/backend/vendor/phpdocumentor/type-resolver" />
++      <path value="$PROJECT_DIR$/backend/vendor/graham-campbell/result-type" />
++      <path value="$PROJECT_DIR$/backend/vendor/composer" />
++      <path value="$PROJECT_DIR$/backend/vendor/psr/container" />
++      <path value="$PROJECT_DIR$/backend/vendor/psr/event-dispatcher" />
++      <path value="$PROJECT_DIR$/backend/vendor/psr/log" />
++      <path value="$PROJECT_DIR$/backend/vendor/psr/simple-cache" />
++      <path value="$PROJECT_DIR$/backend/vendor/opis/closure" />
++      <path value="$PROJECT_DIR$/backend/vendor/voku/portable-ascii" />
++      <path value="$PROJECT_DIR$/backend/vendor/brick/math" />
++      <path value="$PROJECT_DIR$/backend/vendor/nikic/fast-route" />
++      <path value="$PROJECT_DIR$/backend/vendor/nikic/php-parser" />
++      <path value="$PROJECT_DIR$/backend/vendor/nesbot/carbon" />
++      <path value="$PROJECT_DIR$/backend/vendor/ramsey/collection" />
++      <path value="$PROJECT_DIR$/backend/vendor/ramsey/uuid" />
++      <path value="$PROJECT_DIR$/backend/vendor/vlucas/phpdotenv" />
++      <path value="$PROJECT_DIR$/backend/vendor/egulias/email-validator" />
++      <path value="$PROJECT_DIR$/backend/vendor/laravel/lumen-framework" />
++      <path value="$PROJECT_DIR$/backend/vendor/mockery/mockery" />
++      <path value="$PROJECT_DIR$/backend/vendor/monolog/monolog" />
++      <path value="$PROJECT_DIR$/backend/vendor/myclabs/deep-copy" />
++      <path value="$PROJECT_DIR$/backend/vendor/phar-io/manifest" />
++      <path value="$PROJECT_DIR$/backend/vendor/phar-io/version" />
++      <path value="$PROJECT_DIR$/backend/vendor/phpspec/prophecy" />
++      <path value="$PROJECT_DIR$/backend/vendor/phpunit/php-code-coverage" />
++      <path value="$PROJECT_DIR$/backend/vendor/phpunit/php-file-iterator" />
++      <path value="$PROJECT_DIR$/backend/vendor/phpunit/php-invoker" />
++      <path value="$PROJECT_DIR$/backend/vendor/phpunit/php-text-template" />
++      <path value="$PROJECT_DIR$/backend/vendor/phpunit/php-timer" />
++      <path value="$PROJECT_DIR$/backend/vendor/phpunit/phpunit" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/console" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/deprecation-contracts" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/error-handler" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/event-dispatcher" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/event-dispatcher-contracts" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/finder" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/http-client-contracts" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/http-foundation" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/http-kernel" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/mime" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-ctype" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-intl-grapheme" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-intl-idn" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-intl-normalizer" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-mbstring" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php72" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php73" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php80" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/process" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/service-contracts" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/string" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/translation" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/translation-contracts" />
++      <path value="$PROJECT_DIR$/backend/vendor/symfony/var-dumper" />
++      <path value="$PROJECT_DIR$/backend/vendor/theseer/tokenizer" />
++    </include_path>
++  </component>
+   <component name="ProjectId" id="1oFfxKQSwfvf2BINVJaaT29XpQE" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+@@ -19,6 +149,8 @@
+     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+     <property name="android.sdk.path" value="$PROJECT_DIR$/../MiSDK" />
++    <property name="node.js.path.for.package.tslint" value="project" />
++    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+   </component>
+   <component name="SvnConfiguration">
+@@ -33,6 +165,17 @@
+       <updated>1612887511550</updated>
+     </task>
+     <servers />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
+   </component>
+   <component name="WindowStateProjectService">
+     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1612887705715">

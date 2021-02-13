@@ -20,6 +20,11 @@ $router->get('/', function () use ($router) {
 
 //php -S 192.168.1.129:8000 -t ./public
 
+$router->get('/help', function ()  {
+    return view('help');
+});
+
+
 $router->group(['prefix' => 'api'], function () use ($router) {
     $router->post('signin', ['as' => 'operario.store', 'uses' => 'OperarioController@signIn']);
     $router->post('login', ['as' => 'operario.logIn', 'uses' => 'OperarioController@logIn']);
