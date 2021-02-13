@@ -17,11 +17,14 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+
+//php -S 192.168.1.129:8000 -t ./public
+
 $router->group(['prefix' => 'api'], function () use ($router) {
     $router->post('signin', ['as' => 'operario.store', 'uses' => 'OperarioController@signIn']);
     $router->post('login', ['as' => 'operario.logIn', 'uses' => 'OperarioController@logIn']);
     //LogOut funciona mal , recoje la table users en vez de la de operarios
-    $router->post('logout', ['as' => 'logout', 'uses' =>  'OperarioController@logOut']);
+    $router->post('logout', ['as' => 'operario.logout', 'uses' =>  'OperarioController@logOut']);
 
     $router->get('operario-id/{id}', ['as' => 'operario.show', 'uses' => 'OperarioController@getById']);
     $router->delete('delete-operario/{id}', ['as' => 'operario.delete', 'uses' => 'OperarioController@delete']);
