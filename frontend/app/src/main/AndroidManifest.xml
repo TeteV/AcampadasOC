@@ -4,7 +4,11 @@
     package="com.example.frontend">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
 
     <application
         android:allowBackup="true"
@@ -13,8 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Frontend"
-        android:hardwareAccelerated="true"
-        >
+        android:hardwareAccelerated="true">
+
         <activity android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="portrait"
             tools:replace="screenOrientation"/>
@@ -23,8 +27,15 @@
 
         <activity android:name=".controller.ui.MainActivity"/>
 
-       <!-- <android:theme="@style/Theme.AppCompat.NoActionBar"/>-->
+       <!-- <android:theme="@style/Theme.AppCompat.NoActionBar"/>
 
+
+        <android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
+        <android:usesCleartextTraffic="true"/>-->
+
+
+        <activity android:name=".controller.ui.ListActivity"/>
         <activity android:name=".controller.ui.LoginActivity" />
         <activity android:name=".controller.ui.HomeActivity">
             <intent-filter>

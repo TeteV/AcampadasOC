@@ -2,14 +2,11 @@ package com.example.frontend.controller.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.webkit.WebView
 import com.example.frontend.R
 
-class WebView : AppCompatActivity() {
+class ListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_web_view)
-        val myWebView: WebView = findViewById(R.id.webview)
-        myWebView.loadUrl("http://192.168.56.1:8000/help")
+        setContentView(R.layout.activity_list)
     }
 }
