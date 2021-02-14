@@ -13,10 +13,9 @@
 |
 */
 
-$router->get('/', function () use ($router) {
+/*$router->get('/', function () use ($router) {
     return $router->app->version();
-});
-
+});*/
 
 //php -S 192.168.1.129:8000 -t ./public
 

@@ -16,6 +16,8 @@ class Zona extends Migration
         Schema::create('zonas', function (Blueprint $table) {
             $table->id('id');
             $table->string('nombre');
+            $table->string('localizacion');
+            $table->string('url_img');
         });
     }
 
