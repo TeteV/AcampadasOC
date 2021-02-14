@@ -24,6 +24,8 @@ class ZonaController extends Controller{
     public function createPost(Request $request){
         $zona = new Zona();
         $zona->nombre = $request->nombre;
+        $zona->localizacion = $request->localizacion;
+        $zona->url_img = $request->url_img;
         $zona->save();
         return "Post has been created!";
     }
@@ -33,6 +35,8 @@ class ZonaController extends Controller{
     public function updatePost(Request $request){
         $zona = Zona::where('id', $request->id)->first();
         $zona->nombre = $request->nombre;
+        $zona->localizacion = $request->localizacion;
+        $zona->url_img = $request->url_img;
         $zona->save();
         return "Post has been updated!";
     }
