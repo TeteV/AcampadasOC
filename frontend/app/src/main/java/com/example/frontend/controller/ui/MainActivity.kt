@@ -14,8 +14,6 @@ import com.example.frontend.controller.io.ServiceImpl
 import com.example.frontend.controller.models.Zone
 import com.example.frontend.controller.util.ZoneAdapter
 import android.widget.Toast
-import com.example.frontend.databinding.ActivityMainBinding
-import com.google.zxing.integration.android.IntentIntegrator
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,15 +21,15 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var viewAdapter: ZoneAdapter
     private lateinit var viewManager: RecyclerView.LayoutManager
-    private lateinit var binding: ActivityMainBinding
+    //private lateinit var binding: ActivityMainBinding
 
     @SuppressLint("WrongConstant")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        //binding = ActivityMainBinding.inflate(layoutInflater)
         //setContentView(R.layout.activity_main)
-        setContentView(binding.root)
-        binding.qrElement.setOnClickListener { initScanner() }
+        //setContentView(binding.root)
+        //binding.qrElement.setOnClickListener { initScanner() }
 
         zones = ArrayList<Zone>()
 
@@ -46,14 +44,14 @@ class MainActivity : AppCompatActivity() {
         listeners()
 
     }
-
+/*
     private fun initScanner() {
         Log.v("qr", "dentro del init")
         val integrator = IntentIntegrator(this)
         integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE)
         integrator.setBeepEnabled(true)
         integrator.initiateScan()
-    }
+    }*/
 
     private fun listeners() {
         val helpBtn = findViewById<Button>(R.id.helpBtn)
@@ -63,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    /*override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
         if (result != null) {
             if (result.contents == null) {
@@ -78,9 +76,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             super.onActivityResult(requestCode, resultCode, data)
         }
-
-
-    }
+    }*/
 
     private fun getAllRooms() {
         val roomServiceImpl = ServiceImpl()

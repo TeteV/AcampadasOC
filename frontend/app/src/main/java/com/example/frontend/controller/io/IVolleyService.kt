@@ -7,4 +7,6 @@ interface IVolleyService {
 
     fun getAll(context: Context, completionHandler: (response: ArrayList<Zone>?) -> Unit)
 
+    fun getZoneById(context: Context, zoneId: Int, completionHandler: (response: Zone?) -> Unit)
+
 }
