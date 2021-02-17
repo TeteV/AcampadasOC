@@ -56,4 +56,21 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->put('persona/{id}', ['as' => 'persona.updatePost', 'uses' => 'PersonaController@updatePost']);
     // Matches "/api/persona"
     $router->post('persona', ['as' => 'persona.createPost', 'uses' => 'PersonaController@createPost']);
+
+    // Matches "/api/reserva"
+    $router->get('reserva', ['as' => 'reserva', 'uses' => 'ReservaController@index']);
+    // Matches "/api/zona/{id}"
+    $router->get('reserva/{id}', ['as' => 'reserva.show', 'uses' => 'ReservaController@show']);
+
+    // Matches "/api/reserva_zone/{id_zona}"
+    //$router->get('reserva_zone/{id_zona}', ['as' => 'reserva.showReservZone', 'uses' => 'ReservaController@showReservZone']);
+    // Matches "/api/reserva_zone/{id_zona}/{data_picker}"
+    $router->get('reserva_zone/{id_zona}/{date_picker}', ['as' => 'reserva.showReservZoneDate', 'uses' => 'ReservaController@showReservZoneDate']);
+
+    // Matches "/api/zona/{id}"
+    $router->delete('reserva/{id}', ['as' => 'reserva.delete', 'uses' => 'ReservaController@delete']);
+    // Matches "/api/zona/{id}"
+    $router->put('reserva/{id}', ['as' => 'reserva.updatePost', 'uses' => 'ReservaController@updatePost']);
+    // Matches "/api/zona"
+    $router->post('reserva', ['as' => 'reserva.createPost', 'uses' => 'ReservaController@createPost']);
 });

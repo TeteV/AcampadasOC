@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
@@ -13,9 +12,8 @@ import com.example.frontend.R
 import com.example.frontend.controller.io.ServiceImpl
 import com.example.frontend.controller.models.Zone
 import com.example.frontend.controller.util.ZoneAdapter
-import android.widget.Toast
 
-class MainActivity : AppCompatActivity() {
+class ZoneActivity : AppCompatActivity() {
 
     private lateinit var zones: ArrayList<Zone>
     private lateinit var recyclerView: RecyclerView
@@ -26,23 +24,19 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("WrongConstant")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //binding = ActivityMainBinding.inflate(layoutInflater)
-        //setContentView(R.layout.activity_main)
-        //setContentView(binding.root)
-        //binding.qrElement.setOnClickListener { initScanner() }
+        setContentView(R.layout.activity_zone)
 
         zones = ArrayList<Zone>()
 
         viewManager = LinearLayoutManager(this, OrientationHelper.HORIZONTAL, false)
         viewAdapter = ZoneAdapter(zones, this)
-        recyclerView = findViewById<RecyclerView>(R.id.locationViewPager)
+        recyclerView = findViewById<RecyclerView>(R.id.locationViewPager2)
         // use a linear layout manager
         recyclerView.layoutManager = viewManager
         // specify an viewAdapter (see also next example)
         recyclerView.adapter = viewAdapter
         getAllRooms()
         listeners()
-
     }
 /*
     private fun initScanner() {
@@ -54,7 +48,7 @@ class MainActivity : AppCompatActivity() {
     }*/
 
     private fun listeners() {
-        val helpBtn = findViewById<Button>(R.id.helpBtn)
+        val helpBtn = findViewById<Button>(R.id.helpBtn2)
         helpBtn.setOnClickListener {
             val intent = Intent(this, WebView::class.java)
             startActivity(intent)

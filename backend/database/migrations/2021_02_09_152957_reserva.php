@@ -23,6 +23,8 @@ class Reserva extends Migration
             $table->integer('num_vehiculos');
             $table->string('checkin');
             $table->string('fecha_checkin');
+            $table->unsignedBigInteger("id_zona");
+            $table->foreign("id_zona")->references('id')->on('zonas');
             $table->foreign('id_persona')->references('id')->on('personas')->cascadeOnDelete();
         });
     }

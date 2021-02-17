@@ -20,11 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fb85044-f59d-476d-b07e-44128cfe35d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/AcampadasOC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AcampadasOC.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/WebView.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +221,8 @@
       <workItem from="1613129179345" duration="45000" />
       <workItem from="1613139295708" duration="133000" />
       <workItem from="1613215007495" duration="2321000" />
-      <workItem from="1613218300386" duration="196000" />
+      <workItem from="1613218300386" duration="428000" />
+      <workItem from="1613220681222" duration="2285000" />
     </task>
     <servers />
   </component>
