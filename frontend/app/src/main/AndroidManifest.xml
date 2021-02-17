@@ -21,6 +21,7 @@
         android:theme="@style/Theme.Frontend"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
+        <activity android:name=".controller.ui.SigninActivity" />
         <activity android:name=".controller.ui.PersonListTemp" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
@@ -34,8 +35,8 @@
 
         <android:theme="@style/Theme.AppCompat.NoActionBar"/>
 
-        <android:usesCleartextTraffic="true"/>-->
-
+        <android:usesCleartextTraffic="true"/>
+        -->
         <activity android:name=".controller.ui.ListActivity" />
         <activity android:name=".controller.ui.LoginActivity" />
         <activity android:name=".controller.ui.HomeActivity">

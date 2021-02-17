@@ -8,5 +8,6 @@ interface IVolleyService {
 
     fun getAll(context: Context, completionHandler: (response: ArrayList<Zone>?) -> Unit)
     fun logIn(context: Context, operario: Operario, completionHandler: () -> Unit)
+    fun createUser(context: Context, operario: Operario, completionHandler: () -> Unit)
 
 }

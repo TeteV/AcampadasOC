@@ -1,6 +1,5 @@
 package com.example.frontend.controller.io
 
-import android.R
 import android.content.Context
 import android.content.Intent
 import android.util.Log
@@ -73,6 +72,33 @@ class ServiceImpl: IVolleyService {
                     Log.v("login", "Error en login service")
                 })
        ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
+    }
+
+    override fun createUser(context: Context, operario: Operario, completionHandler: () -> Unit) {
+        val path = ServiceSingleton.getInstance(context).baseUrl + "signin"
+        val operarioJson: JSONObject = JSONObject()
+        operarioJson.put("id", 0)
+        operarioJson.put("dni",operario.dni)
+        operarioJson.put("nombre",operario.nombre)
+        operarioJson.put("email",operario.email)
+        operarioJson.put("password",operario.password)
+
+        Log.v("createenService","Operario: "+operarioJson)
+
+        val objectRequest = JsonObjectRequest(Request.Method.POST, path, operarioJson,
+            { response -> completionHandler()
+                val plus = response?.opt("res")
+                if (plus==true){
+                    Log.v("AddUser","Creado")
+                }else{
+                    Log.v("AddUser", "Check Dni or Email")
+                    //Aqui Toast o algo para decir que mire
+                }
+            },
+            { error -> completionHandler()
+                Log.v("AddUser","Roto")
+            })
+        ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
     }
     
 }

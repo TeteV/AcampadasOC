@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.qrElement.setOnClickListener { initScanner() }
 
-        zones = ArrayList<Zone>()
+        /*zones = ArrayList<Zone>()
 
         viewManager = LinearLayoutManager(this, OrientationHelper.HORIZONTAL, false)
         viewAdapter = ZoneAdapter(zones, this)
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         // use a linear layout manager
         recyclerView.layoutManager = viewManager
         // specify an viewAdapter (see also next example)
-        recyclerView.adapter = viewAdapter
+        recyclerView.adapter = viewAdapter*/
         getAllRooms()
         listeners()
 
