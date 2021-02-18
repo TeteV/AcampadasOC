@@ -1,6 +1,7 @@
 package com.example.frontend.controller.io
 
 import android.content.Context
+import com.example.frontend.controller.models.Operario
 import com.example.frontend.controller.models.Persona
 import com.example.frontend.controller.models.Reserva
 import com.example.frontend.controller.models.Zone
@@ -20,5 +21,9 @@ interface IVolleyService {
     fun getBookingByDate(context: Context, userId: Int, date:String, completionHandler: (response: ArrayList<Reserva>?) -> Unit)
 
     fun updateReserve(context: Context,  reserva: Reserva, completionHandler: () -> Unit)
+
+    fun logIn(context: Context, operario: Operario, completionHandler: () -> Unit)
+
+    fun createUser(context: Context, operario: Operario, completionHandler: () -> Unit)
 
 }

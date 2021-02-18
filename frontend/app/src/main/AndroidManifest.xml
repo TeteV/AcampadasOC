@@ -17,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".controller.ui.ReservaDetalladaActivity"></activity>
+        <activity android:name=".controller.ui.RegisterActivity"></activity>
+        <activity android:name=".controller.ui.ReservaDetalladaActivity" />
         <activity android:name=".controller.ui.ZoneActivity" />
         <activity android:name=".controller.ui.WebView" />
         <activity android:name=".controller.ui.MainActivity" />

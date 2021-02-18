@@ -1,12 +1,16 @@
 package com.example.frontend.controller.io
 
 import android.content.Context
+import android.content.Intent
+import android.util.Log
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.JsonObjectRequest
+import com.example.frontend.controller.models.Operario
 import com.example.frontend.controller.models.Persona
 import com.example.frontend.controller.models.Reserva
 import com.example.frontend.controller.models.Zone
+import com.example.frontend.controller.ui.ZoneActivity
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -169,6 +173,71 @@ class ServiceImpl: IVolleyService {
         val objectRequest = JsonObjectRequest(Request.Method.PUT, path, bookingJSON,
                 { response -> completionHandler() },
                 { error -> completionHandler() })
+        ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
+    }
+
+    override fun logIn(context: Context, operario: Operario, completionHandler: () -> Unit){
+        Log.v("LoginService", "Auqi")
+        val path = ServiceSingleton.getInstance(context).baseUrl + "login"
+        val operarioJson = JSONObject()
+        Log.v("LoginService", "Auqi1")
+        operarioJson.put("email", operario.email)
+        operarioJson.put("password", operario.password)
+        operarioJson.put("api_token", operario.api_token)
+        Log.v("LoginService", "Auqi2")
+        val objectRequest = JsonObjectRequest(Request.Method.POST, path, operarioJson,
+                { response ->
+                    completionHandler()
+                    Log.v("LoginService", "Auqi3")
+                    val plus = response?.opt("res")
+                    val tokn = response?.opt("api_token").toString()
+                    val id = response?.opt("id").toString()
+                    Log.v("LoginService", "plus: " + plus)
+                    Log.v("login", "token: " + tokn)
+                    Log.v("login", "Id: " + id)
+                    Log.v("login", "response: " + response.toString())
+                    if (plus == true) {
+                        Log.v("loginService", "Login correcto")
+                        val intent = Intent(context, ZoneActivity::class.java)
+                        /* intent.putExtra("api_token", tokn)
+                        intent.putExtra("id_user",id_us)*/
+                        context.startActivity(intent)
+                    } else {
+                        Log.v("loginService", "Login incorrecto")
+
+                    }
+                },
+                { error ->
+                    completionHandler()
+                    Log.v("login", "Error en login service")
+                })
+        ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
+    }
+
+    override fun createUser(context: Context, operario: Operario, completionHandler: () -> Unit) {
+        val path = ServiceSingleton.getInstance(context).baseUrl + "signin"
+        val operarioJson: JSONObject = JSONObject()
+        operarioJson.put("id", 0)
+        operarioJson.put("dni",operario.dni)
+        operarioJson.put("nombre",operario.nombre)
+        operarioJson.put("email",operario.email)
+        operarioJson.put("password",operario.password)
+
+        Log.v("createenService","Operario: "+ operarioJson)
+
+        val objectRequest = JsonObjectRequest(Request.Method.POST, path, operarioJson,
+                { response -> completionHandler()
+                    val plus = response?.opt("res")
+                    if (plus==true){
+                        Log.v("AddUser","Creado")
+                    }else{
+                        Log.v("AddUser", "Check Dni or Email")
+                        //Aqui Toast o algo para decir que mire
+                    }
+                },
+                { error -> completionHandler()
+                    Log.v("AddUser","Roto")
+                })
         ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
     }
 

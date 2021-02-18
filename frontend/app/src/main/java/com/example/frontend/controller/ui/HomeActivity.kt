@@ -14,10 +14,19 @@ class HomeActivity : AppCompatActivity() {
         button.setOnClickListener {
             goToLoginActivity()
         }
+
+        textViewSignIn.setOnClickListener {
+            goToSignInActivity()
+        }
     }
 
     private fun goToLoginActivity(){
         val intent= Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun goToSignInActivity() {
+        val intent= Intent(this, RegisterActivity::class.java)
         startActivity(intent)
     }
 }
