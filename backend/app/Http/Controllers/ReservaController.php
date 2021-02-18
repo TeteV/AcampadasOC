@@ -17,9 +17,15 @@ class ReservaController {
     public function show($id){
         return Reserva::findOrFail($id);
     }
+/*
+    public function showReservZone($id_zona){
+        return Reserva::all()->where('id_zona', $id_zona);;
+    }*/
 
-    public function showReserv($id_user){
-        return Reserva::all()->where('id_persona', $id_user);;
+    public function showReservZoneDate($id_zona, $date_picker){
+        return Reserva::all()
+            ->where('id_zona', $id_zona)
+            ->where('fecha_entrada', $date_picker)->values();
     }
 
     //POST/*

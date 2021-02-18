@@ -28,7 +28,7 @@
             android:screenOrientation="portrait"
             tools:replace="screenOrientation" />
         <activity android:name=".controller.ui.WebView" />
-        <activity android:name=".controller.ui.MainActivity" />
+        <activity android:name=".controller.ui.ZoneActivity" />
         <!--
  <android:theme="@style/Theme.AppCompat.NoActionBar"/>
 

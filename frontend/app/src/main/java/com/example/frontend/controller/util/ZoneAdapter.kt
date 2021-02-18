@@ -12,8 +12,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.frontend.R
 import com.example.frontend.controller.models.Zone
 import com.example.frontend.controller.ui.ListActivity
-import com.example.frontend.controller.ui.LoginActivity
-import com.example.frontend.controller.ui.MainActivity
 import com.squareup.picasso.Picasso
 
 class ZoneAdapter(var zoneLists: ArrayList<Zone>, val context: Context): RecyclerView.Adapter<ZoneAdapter.ViewHolder>() {
@@ -45,9 +43,8 @@ class ZoneAdapter(var zoneLists: ArrayList<Zone>, val context: Context): Recycle
 
             itemView.setOnClickListener {
                 val intent = Intent(context, ListActivity::class.java)
-                /*intent.putExtra("roomId", b.id)
-                intent.putExtra("state", "Showing")*/
-                Log.v("hola caracola antes", b.id.toString())
+                intent.putExtra("zoneId", b.id)
+                intent.putExtra("state", "Showing")
                 context.startActivity(intent)
             }
         }

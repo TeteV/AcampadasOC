@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_green"
-    tools:context=".controller.ui.MainActivity">
-
-
+    tools:context=".controller.ui.ZoneActivity">
 
     <ImageView
         android:id="@+id/ligtnings"
@@ -23,7 +21,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/moon3"
+        android:id="@+id/moon32"
         android:layout_width="238.06dp"
         android:layout_height="238.06dp"
         android:layout_marginTop="4dp"
@@ -49,7 +47,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/collage2"
+        android:id="@+id/collage22"
         android:layout_width="1105dp"
         android:layout_height="565.45dp"
         android:layout_marginTop="56dp"
@@ -88,27 +86,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <Button
-        android:background="@drawable/rounded_borders_helpbtn"
-        android:id="@+id/helpBtn"
-        android:layout_width="39dp"
-        android:layout_height="39dp"
-        android:backgroundTint="@color/white"
-        android:text="@string/helpBtn"
-        android:textColor="@color/dark_green"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.991" />
-
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView2"
         android:layout_width="418dp"
         android:layout_height="483dp"
-        android:layout_marginTop="308dp"
+        android:layout_marginTop="304dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,7 +99,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/qr_element"
+        android:id="@+id/qrElement"
         android:layout_width="330dp"
         android:layout_height="169dp"
         android:layout_marginTop="324dp"
@@ -129,7 +111,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="388dp"
@@ -143,7 +125,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView42"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="408dp"
@@ -157,7 +139,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView52"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="468dp"
@@ -171,7 +153,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/rectContent"
+        android:id="@+id/rectContent2"
         android:layout_width="45dp"
         android:layout_height="10dp"
         android:layout_marginTop="336dp"
@@ -183,7 +165,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/camp"
+        android:id="@+id/camp2"
         android:layout_width="221dp"
         android:layout_height="157dp"
         android:layout_marginTop="184dp"
@@ -195,7 +177,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/avatarProfile"
+        android:id="@+id/avatarProfile2"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_gravity="center"
@@ -209,7 +191,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/locationViewPager"
+        android:id="@+id/locationViewPager2"
         android:layout_width="match_parent"
         android:layout_height="165dp"
         android:layout_marginTop="500dp"
@@ -219,5 +201,19 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/helpBtn2"
+        android:layout_width="96dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="672dp"
+        android:background="@color/light_blue"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/dark_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Help" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

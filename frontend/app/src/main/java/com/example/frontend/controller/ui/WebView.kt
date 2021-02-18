@@ -10,6 +10,7 @@ class WebView : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_web_view)
         val myWebView: WebView = findViewById(R.id.webview)
-        myWebView.loadUrl("http://192.168.56.1:8000/help")
+        //JAvi myWebView.loadUrl("http://192.168.56.1:8000/help")
+        myWebView.loadUrl("http://192.168.1.129:8000/help")
     }
 }
