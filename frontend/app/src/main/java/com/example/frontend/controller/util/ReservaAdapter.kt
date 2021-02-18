@@ -13,6 +13,7 @@ import com.example.frontend.controller.io.ServiceImpl
 import com.example.frontend.controller.models.Reserva
 import com.example.frontend.controller.models.Zone
 import com.example.frontend.controller.ui.ListActivity
+import com.example.frontend.controller.ui.ReservaDetalladaActivity
 import com.squareup.picasso.Picasso
 
 class ReservaAdapter (var reservaList: ArrayList<Reserva>, val context: Context): RecyclerView.Adapter<ReservaAdapter.ViewHolder>() {
@@ -36,25 +37,46 @@ class ReservaAdapter (var reservaList: ArrayList<Reserva>, val context: Context)
 
             val entrada: TextView = itemView.findViewById(R.id.textEntrada)
             val salida: TextView = itemView.findViewById(R.id.textEntrada2)
-
-            roomServiceImpl.getPersonById(context, b.id_persona) { response ->
-                run {
-                    if (response != null) {
-                        val name: TextView = itemView.findViewById(R.id.textEntrada3)
-                        name.setText(response?.name ?: "")
-                    }
-                }
-            }
+            val iconChecked: ImageView = itemView.findViewById(R.id.iconChecked)
 
             entrada.text = b.fecha_entrada
             salida.text = b.fecha_salida
 
-            itemView.setOnClickListener {
-                val intent = Intent(context, ListActivity::class.java)
-                intent.putExtra("zoneId", b.id)
-                intent.putExtra("state", "Showing")
-                context.startActivity(intent)
+            if(b.checkin == "1"){
+                iconChecked.setBackgroundResource(R.drawable.icon_checked)
+            }else{
+                iconChecked.setBackgroundResource(R.drawable.icon_nonchecked)
+            }
+
+            roomServiceImpl.getPersonById(context, b.id_persona) { response ->
+                run {
+                    if (response != null) {
+                        val url = "http://192.168.56.1:8000/img/"
+                        val name: TextView = itemView.findViewById(R.id.textEntrada3)
+                        val apellidos: TextView = itemView.findViewById(R.id.textEntrada4)
+                        val dni: TextView = itemView.findViewById(R.id.textDni)
+                        val imagePerson: ImageView = itemView.findViewById(R.id.imagePerson)
+
+                        name.setText(response?.name ?: "")
+                        apellidos.setText(response?.apellidos ?: "")
+                        dni.setText(response?.dni ?: "")
+
+                        val imageUrl = url + response.url_img + ".png"
+                        Picasso.with(context).load(imageUrl).into(imagePerson);
+                    }
+                    itemView.setOnClickListener {
+                        val intent = Intent(context, ReservaDetalladaActivity::class.java)
+                        intent.putExtra("reservaId", b.id)
+                        intent.putExtra("localizador", b.localizador_reserva)
+                        intent.putExtra("checkin", b.checkin)
+                        intent.putExtra("zoneId", b.id_zona)
+                        intent.putExtra("personId", response?.id)
+                        intent.putExtra("state", "Showing")
+                        context.startActivity(intent)
+                    }
+                }
             }
         }
     }
+
 }

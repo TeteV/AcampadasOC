@@ -57,23 +57,8 @@ class ListActivity : AppCompatActivity() {
         val timeZone = "GMT+1"
         val prueba = "1";
 
-        //textView.text =
-        //getBookings(zoneId)
         getBookingsDate(zoneId, obtenerFechaActual(timeZone).toString())
     }
-/*
-    private fun getBookings(zoneId: Int) {
-        val roomServiceImpl = ServiceImpl()
-        roomServiceImpl.getBooking(this, zoneId) { response ->
-            run {
-                if (response != null) {
-                    viewAdapter.notifyDataSetChanged()
-                    viewAdapter.reservaList = response
-                }
-                viewAdapter.notifyDataSetChanged()
-            }
-        }
-    }*/
 
     private fun getBookingsDate(zoneId: Int, prueba: String) {
         val roomServiceImpl = ServiceImpl()

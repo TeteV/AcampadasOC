@@ -33,13 +33,13 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/locationViewPager2"
-        android:layout_width="match_parent"
-        android:layout_height="381dp"
+        android:layout_width="448dp"
+        android:layout_height="379dp"
         android:layout_marginTop="216dp"
         android:paddingStart="60dp"
         android:paddingEnd="60dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></androidx.recyclerview.widget.RecyclerView>
 

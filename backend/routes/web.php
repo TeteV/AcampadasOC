@@ -59,7 +59,7 @@ $router->group(['prefix' => 'api'], function () use ($router) {
 
     // Matches "/api/reserva"
     $router->get('reserva', ['as' => 'reserva', 'uses' => 'ReservaController@index']);
-    // Matches "/api/zona/{id}"
+    // Matches "/api/reserva/{id}"
     $router->get('reserva/{id}', ['as' => 'reserva.show', 'uses' => 'ReservaController@show']);
 
     // Matches "/api/reserva_zone/{id_zona}"
@@ -70,7 +70,7 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     // Matches "/api/zona/{id}"
     $router->delete('reserva/{id}', ['as' => 'reserva.delete', 'uses' => 'ReservaController@delete']);
     // Matches "/api/zona/{id}"
-    $router->put('reserva/{id}', ['as' => 'reserva.updatePost', 'uses' => 'ReservaController@updatePost']);
+    $router->put('reservaUpdate/{id}', ['as' => 'reserva.updatePost', 'uses' => 'ReservaController@updatePost']);
     // Matches "/api/zona"
     $router->post('reserva', ['as' => 'reserva.createPost', 'uses' => 'ReservaController@createPost']);
 });

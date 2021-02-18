@@ -1,3 +1,3 @@
 package com.example.frontend.controller.models
 
-class Persona (val id: Int, val name: String,val apellidos: String, val dni: String)
+class Persona (val id: Int, val name: String,val apellidos: String, val dni: String, val url_img: String)

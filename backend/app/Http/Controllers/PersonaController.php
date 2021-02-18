@@ -24,6 +24,7 @@ class PersonaController extends Controller{
         $persona->nombre = $request->nombre;
         $persona->apellidos = $request->apellidos;
         $persona->dni = $request->dni;
+        $persona->url_img = $request->url_img;
         $persona->save();
         return "Post has been created!";
     }
@@ -35,6 +36,7 @@ class PersonaController extends Controller{
         $persona->nombre = $request->nombre;
         $persona->apellidos = $request->apellidos;
         $persona->dni = $request->dni;
+        $persona->url_img = $request->url_img;
         $persona->save();
         return "Post has been updated!";
     }

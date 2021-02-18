@@ -25,7 +25,7 @@ class ReservaController {
     public function showReservZoneDate($id_zona, $date_picker){
         return Reserva::all()
             ->where('id_zona', $id_zona)
-            ->where('fecha_entrada', $date_picker);
+            ->where('fecha_entrada', $date_picker)->values();
     }
 
     //POST/*
