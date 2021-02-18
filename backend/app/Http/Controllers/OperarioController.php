@@ -58,9 +58,9 @@ class OperarioController extends Controller
     }
 
     public function logOut(){
-        $user = auth()->user();
-        $user->api_token = null;
-        $user->save();
+        $op = auth()->user();
+        $op->api_token = null;
+        $op->save();
 
         return response()->json([
             'res'=>true,
