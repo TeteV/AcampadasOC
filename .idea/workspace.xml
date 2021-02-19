@@ -20,13 +20,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fb85044-f59d-476d-b07e-44128cfe35d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/io/IVolleyService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/io/IVolleyService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/io/ServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/io/ServiceImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/io/ServiceSingleton.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/io/ServiceSingleton.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/LoginActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/public/img/persona1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/public/img/persona2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/public/img/persona3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/models/Persona.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/models/Reserva.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/RegisterActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/ReservaDetalladaActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/util/ReservaAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/drawable/bg_button_checked.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/drawable/bg_listop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/drawable/icon_checked.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/drawable/icon_nonchecked.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/drawable/reservas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/drawable/rounded_image_view.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/layout/activity_register.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/layout/activity_reserva_detallada.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/layout/item_container_reservas.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/values/ids.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/Http/Controllers/PersonaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Controllers/PersonaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/Http/Controllers/ReservaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Controllers/ReservaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/Models/Persona.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Models/Persona.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/Models/Reserva.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Models/Reserva.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/migrations/2021_02_09_152956_persona.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/migrations/2021_02_09_152956_persona.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/migrations/2021_02_09_152957_reserva.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/migrations/2021_02_09_152957_reserva.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/ListActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/ListActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/ZoneActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/util/ZoneAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/util/ZoneAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/res/layout-v21/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/res/layout/activity_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/res/layout/activity_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/res/layout/activity_zone.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/res/values/themes.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +216,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../MiSDK" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
