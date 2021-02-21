@@ -44,7 +44,7 @@
         app:layout_constraintTop_toTopOf="parent"></androidx.recyclerview.widget.RecyclerView>
 
     <ImageView
-        android:id="@+id/qr_element"
+        android:id="@+id/qrElement"
         android:layout_width="330dp"
         android:layout_height="169dp"
         android:layout_marginTop="568dp"

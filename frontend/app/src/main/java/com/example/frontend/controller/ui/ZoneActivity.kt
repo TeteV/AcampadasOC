@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
@@ -58,6 +59,12 @@ class ZoneActivity : AppCompatActivity() {
         val helpBtn = findViewById<Button>(R.id.helpBtn2)
         helpBtn.setOnClickListener {
             val intent = Intent(this, WebView::class.java)
+            startActivity(intent)
+        }
+
+        val profibleBtn = findViewById<ImageView>(R.id.avatarProfile2)
+        profibleBtn.setOnClickListener {
+            val intent = Intent(this, UserProfileActivity::class.java)
             startActivity(intent)
         }
     }

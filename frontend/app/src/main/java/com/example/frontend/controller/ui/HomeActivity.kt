@@ -21,7 +21,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun goToSignInActivity() {
-        val intent= Intent(this, SigninActivity::class.java)
+        val intent= Intent(this, RegisterActivity::class.java)
         startActivity(intent)
     }
 
