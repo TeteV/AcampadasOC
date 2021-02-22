@@ -30,4 +30,7 @@ interface IVolleyService {
     fun logIn(context: Context, operario: Operario, completionHandler: () -> Unit)
     fun createUser(context: Context, operario: Operario, completionHandler: () -> Unit)
 
+    fun createZone(context: Context, zone: Zone, completionHandler: () -> Unit)
+    fun deleteZone(context: Context, id:Int, completionHandler: () -> Unit)
+    fun updateZone(context: Context, zone: Zone, completionHandler: () -> Unit)
 }

@@ -2,18 +2,25 @@ package com.example.frontend.controller.ui
 
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.frontend.R
 import com.example.frontend.controller.io.ServiceImpl
 import com.example.frontend.controller.models.Reserva
+import com.example.frontend.controller.models.Zone
 import com.example.frontend.controller.util.ReservaAdapter
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_list.*
@@ -53,11 +60,101 @@ class ListActivity : AppCompatActivity() {
 
         state = this.intent.getStringExtra("state").toString()
         val zoneId = this.intent.getIntExtra("zoneId", 1)
+
         if(state == "Showing") getZone(zoneId)
         val timeZone = "GMT+1"
         val prueba = "1";
 
         getBookingsDate(zoneId, obtenerFechaActual(timeZone).toString())
+
+        listeners()
+    }
+
+    private fun listeners() {
+        val deleteBtn = findViewById<Button>(R.id.deleteBtn)
+        deleteBtn.setOnClickListener {
+            toastDeleteZone()
+        }
+
+        val updateBtn = findViewById<Button>(R.id.updateBtn)
+        updateBtn.setOnClickListener {
+            toastUpdateZone()
+        }
+    }
+
+    private fun toastUpdateZone() {
+        val zoneId = this.intent.getIntExtra("zoneId", 0)
+        val nombre: String = findViewById<TextView>(R.id.editTextNombreZona).text.toString()
+        val zonaNombre: String = findViewById<TextView>(R.id.editTextZona).text.toString()
+        val zone = Zone(zoneId,nombre,zonaNombre ,"")
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Update")
+        builder.setMessage("Are you sure to update " + nombre)
+        builder.setMessage("With " + nombre + " "+ zonaNombre + " ?")
+
+        builder.setPositiveButton(android.R.string.yes) { dialog, which ->
+            Toast.makeText(
+                    applicationContext,
+                    android.R.string.yes, Toast.LENGTH_SHORT
+            ).show()
+            updateZone(zone)
+        }
+        builder.setNegativeButton(android.R.string.no) { dialog, which ->
+            Toast.makeText(
+                    applicationContext,
+                    android.R.string.no, Toast.LENGTH_SHORT
+            ).show()
+        }
+        builder.show()
+    }
+
+    private fun updateZone(zone: Zone) {
+        val ServiceImpl = ServiceImpl()
+        ServiceImpl.updateZone(this, zone) { ->
+            run {
+                Log.v("updatezone", "update")
+                Toast.makeText(this, "Zona update", Toast.LENGTH_LONG).show()
+                val intent = Intent(this, ZoneActivity::class.java)
+                startActivity(intent)
+            }
+        }
+    }
+
+    private fun toastDeleteZone() {
+        val zoneId = this.intent.getIntExtra("zoneId", 0)
+        val nombre: String = findViewById<TextView>(R.id.editTextNombreZona).text.toString()
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Delete")
+        builder.setMessage("Are you sure to delete " + nombre + " ?")
+
+        builder.setPositiveButton(android.R.string.yes) { dialog, which ->
+            Toast.makeText(
+                    applicationContext,
+                    android.R.string.yes, Toast.LENGTH_SHORT
+            ).show()
+            deleteZone(zoneId)
+
+        }
+
+        builder.setNegativeButton(android.R.string.no) { dialog, which ->
+            Toast.makeText(
+                    applicationContext,
+                    android.R.string.no, Toast.LENGTH_SHORT
+            ).show()
+        }
+        builder.show()
+    }
+
+    private fun deleteZone(zoneId: Int) {
+        val ServiceImpl = ServiceImpl()
+        ServiceImpl.deleteZone(this, zoneId) { ->
+            run {
+                Log.v("deletezone", "borrao")
+                Toast.makeText(this, "Zona borrada", Toast.LENGTH_LONG).show()
+                val intent = Intent(this, ZoneActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 
     private fun getBookingsDate(zoneId: Int, prueba: String) {
@@ -80,6 +177,10 @@ class ListActivity : AppCompatActivity() {
                 val url = "http://192.168.56.1:8000/img/"
                 val imageUrl = url + response?.url_img + ".jpg"
                 Picasso.with(this).load(imageUrl).into(bg_lists);
+                val nombreET: EditText = findViewById(R.id.editTextZona)
+                val zonaET: EditText = findViewById(R.id.editTextNombreZona)
+                nombreET.setText(response?.nombre.toString() ?: "")
+                zonaET.setText(response?.localizacion.toString() ?: "")
             }
         }
     }

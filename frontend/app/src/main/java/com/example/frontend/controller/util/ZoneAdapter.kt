@@ -44,6 +44,8 @@ class ZoneAdapter(var zoneLists: ArrayList<Zone>, val context: Context): Recycle
             itemView.setOnClickListener {
                 val intent = Intent(context, ListActivity::class.java)
                 intent.putExtra("zoneId", b.id)
+                intent.putExtra("nombre", b.nombre)
+                intent.putExtra("localizacion", b.localizacion)
                 intent.putExtra("state", "Showing")
                 context.startActivity(intent)
             }

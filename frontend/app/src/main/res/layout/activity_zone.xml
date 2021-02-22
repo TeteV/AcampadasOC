@@ -216,4 +216,19 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Help" />
 
+    <Button
+        android:id="@+id/addZoneBtn"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/bg_button_circle"
+        android:backgroundTint="@color/orange"
+        android:text="+"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.928" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

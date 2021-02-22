@@ -21,6 +21,7 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
+        <activity android:name=".controller.ui.addZoneActivity"></activity>
         <activity android:name=".controller.ui.UserProfileActivity" />
         <activity android:name=".controller.ui.ReservaDetalladaActivity" />
         <activity android:name=".controller.ui.RegisterActivity" />

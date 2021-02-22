@@ -67,6 +67,12 @@ class ZoneActivity : AppCompatActivity() {
             val intent = Intent(this, UserProfileActivity::class.java)
             startActivity(intent)
         }
+
+        val addZoneBtn = findViewById<Button>(R.id.addZoneBtn)
+        addZoneBtn.setOnClickListener {
+            val intent = Intent(this, addZoneActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -97,4 +103,6 @@ class ZoneActivity : AppCompatActivity() {
             }
         }
     }
+
+
 }

@@ -298,4 +298,54 @@ class ServiceImpl: IVolleyService {
         ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
     } //This is like the C of user CRUD
     /*---------------------------------------------------------*/
+
+    override fun createZone(context: Context, zone: Zone, completionHandler: () -> Unit) {
+        val path = ServiceSingleton.getInstance(context).baseUrl + "add-zona"
+        val zoneJson: JSONObject = JSONObject()
+        zoneJson.put("id", 0)
+        zoneJson.put("nombre",zone.nombre)
+        zoneJson.put("localizacion",zone.localizacion)
+        zoneJson.put("url_img",zone.url_img)
+
+        Log.v("createenZoneSer","Zona: "+ zoneJson)
+
+        val objectRequest = JsonObjectRequest(Request.Method.POST, path, zoneJson,
+            { response -> completionHandler()
+                Log.v("Addzona","Creado")
+            },
+            { error -> completionHandler()
+                Log.v("Addzona","Roto")
+            })
+        ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
+    }
+    override fun deleteZone(context: Context, id: Int, completionHandler: () -> Unit) {
+        val path = ServiceSingleton.getInstance(context).baseUrl + "delete-zona/" + id
+        val objectRequest = JsonObjectRequest(Request.Method.DELETE, path, null,
+                { response ->
+                    Log.v("borro", "se borró")
+                    completionHandler()
+                },
+                { error ->
+                    Log.v("borro", "error al borrar")
+                    completionHandler()
+                })
+        ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
+    }
+    override fun updateZone(context: Context, zone: Zone, completionHandler: () -> Unit) {
+        val path = ServiceSingleton.getInstance(context).baseUrl + "update-zona/" + zone.id
+        val zoneJson: JSONObject = JSONObject()
+        zoneJson.put("nombre", zone.nombre)
+        zoneJson.put("localizacion", zone.localizacion)
+        zoneJson.put("url_img","")
+
+        val objectRequest = JsonObjectRequest(Request.Method.PUT, path, zoneJson,
+                { response ->
+                    Log.v("update","Se hizo")
+                    completionHandler()
+                },
+                { error ->
+                    completionHandler()
+                })
+        ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
+    }
 }
