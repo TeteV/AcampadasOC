@@ -23,8 +23,11 @@ interface IVolleyService {
 
     fun getBookingByDate(context: Context, userId: Int, date:String, completionHandler: (response: ArrayList<Reserva>?) -> Unit)
 
+    fun createReserve(context: Context, reserva: Reserva, completionHandler: () -> Unit)
+
     fun updateReserve(context: Context,  reserva: Reserva, completionHandler: () -> Unit)
 
+    fun deleteByReservaId(context: Context, reservaId: Int, completionHandler: () -> Unit)
 
 
 }

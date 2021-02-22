@@ -2,6 +2,7 @@ package com.example.frontend.controller.ui
 
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Build
 import android.os.Bundle
@@ -17,6 +18,7 @@ import com.example.frontend.controller.models.Reserva
 import com.example.frontend.controller.util.ReservaAdapter
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_list.*
+import kotlinx.android.synthetic.main.activity_reserva_detallada.*
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -58,6 +60,12 @@ class ListActivity : AppCompatActivity() {
         val prueba = "1";
 
         getBookingsDate(zoneId, obtenerFechaActual(timeZone).toString())
+
+        imageButtonCreate.setOnClickListener {
+            val intent = Intent(this, CreateReservaActivity::class.java)
+            intent.putExtra("zoneId", zoneId)
+            startActivity(intent)
+        }
     }
 
     private fun getBookingsDate(zoneId: Int, prueba: String) {
