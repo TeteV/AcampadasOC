@@ -39,6 +39,7 @@ class ReservaController {
         $zona->num_vehiculos = $request->num_vehiculos;
         $zona->checkin = $request->checkin;
         $zona->fecha_checkin = $request->fecha_checkin;
+        $zona->id_zona = $request->id_zona;
         $zona->save();
         return "Post has been created!";
     }
@@ -55,6 +56,7 @@ class ReservaController {
         $zona->num_vehiculos = $request->num_vehiculos;
         $zona->checkin = $request->checkin;
         $zona->fecha_checkin = $request->fecha_checkin;
+        $zona->id_zona = $request->id_zona;
         $zona->save();
         return "Post has been updated!";
     }

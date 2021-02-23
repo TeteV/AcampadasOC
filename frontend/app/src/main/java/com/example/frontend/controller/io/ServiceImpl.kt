@@ -159,6 +159,26 @@ class ServiceImpl: IVolleyService {
         ServiceSingleton.getInstance(context).addToRequestQueue(arrayRequest)
     }
 
+    override fun createReserve(context: Context, reserva: Reserva, completionHandler: () -> Unit) {
+        val path = ServiceSingleton.getInstance(context).baseUrl + "reservaCreate"
+        val bookingJSON: JSONObject = JSONObject()
+        bookingJSON.put("id", reserva.id.toString())
+        bookingJSON.put("id_persona", reserva.id_persona.toString())
+        bookingJSON.put("fecha_entrada", reserva.fecha_entrada)
+        bookingJSON.put("fecha_salida", reserva.fecha_salida)
+        bookingJSON.put("localizador_reserva", reserva.localizador_reserva)
+        bookingJSON.put("num_personas", reserva.num_personas.toString())
+        bookingJSON.put("num_vehiculos", reserva.num_vehiculos.toString())
+        bookingJSON.put("checkin", reserva.checkin)
+        bookingJSON.put("fecha_checkin", reserva.fecha_checkin)
+        bookingJSON.put("id_zona", reserva.id_zona.toString())
+
+        val objectRequest = JsonObjectRequest(Request.Method.POST, path, bookingJSON,
+            { response -> completionHandler() },
+            { error -> completionHandler() })
+        ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
+    }
+
     override fun updateReserve(context: Context, reserva: Reserva, completionHandler: () -> Unit) {
         val path = ServiceSingleton.getInstance(context).baseUrl + "reservaUpdate/" + reserva.id
         val bookingJSON: JSONObject = JSONObject()
@@ -271,6 +291,7 @@ class ServiceImpl: IVolleyService {
                 })
         ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
     }
+
     override fun createUser(context: Context, operario: Operario, completionHandler: () -> Unit) {
         val path = ServiceSingleton.getInstance(context).baseUrl + "signin"
         val operarioJson: JSONObject = JSONObject()
@@ -296,8 +317,7 @@ class ServiceImpl: IVolleyService {
                     Log.v("AddUser","Roto")
                 })
         ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
-    } //This is like the C of user CRUD
-    /*---------------------------------------------------------*/
+    }
 
     override fun createZone(context: Context, zone: Zone, completionHandler: () -> Unit) {
         val path = ServiceSingleton.getInstance(context).baseUrl + "add-zona"
@@ -327,10 +347,25 @@ class ServiceImpl: IVolleyService {
                 },
                 { error ->
                     Log.v("borro", "error al borrar")
+                })
+        ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
+    }
+
+    override fun deleteByReservaId(context: Context, reservaId: Int, completionHandler: () -> Unit) {
+        val path = ServiceSingleton.getInstance(context).baseUrl + "reserva/" + reservaId
+        val objectRequest = JsonObjectRequest(Request.Method.DELETE, path, null,
+                { response ->
+                    Log.v("Hola caracola", "se borró")
+                    completionHandler()
+                },
+                { error ->
+                    Log.v("Hola caracola", "dió error")
+
                     completionHandler()
                 })
         ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
     }
+
     override fun updateZone(context: Context, zone: Zone, completionHandler: () -> Unit) {
         val path = ServiceSingleton.getInstance(context).baseUrl + "update-zona/" + zone.id
         val zoneJson: JSONObject = JSONObject()
