@@ -10,8 +10,7 @@ import com.example.frontend.controller.models.Zone
 interface IVolleyService {
 
     fun getAll(context: Context, completionHandler: (response: ArrayList<Zone>?) -> Unit)
-    fun logIn(context: Context, operario: Operario, completionHandler: () -> Unit)
-    fun createUser(context: Context, operario: Operario, completionHandler: () -> Unit)
+
 
     fun getZoneById(context: Context, zoneId: Int, completionHandler: (response: Zone?) -> Unit)
 
@@ -25,6 +24,13 @@ interface IVolleyService {
 
     fun updateReserve(context: Context,  reserva: Reserva, completionHandler: () -> Unit)
 
+    fun getOpById(context: Context, id: Int, completionHandler: (response: Operario?) -> Unit)
+    fun updateUser(context: Context, operario: Operario, completionHandler: () -> Unit)
+    fun deleteUser(context: Context, id:Int, completionHandler: () -> Unit)
+    fun logIn(context: Context, operario: Operario, completionHandler: () -> Unit)
+    fun createUser(context: Context, operario: Operario, completionHandler: () -> Unit)
 
-
+    fun createZone(context: Context, zone: Zone, completionHandler: () -> Unit)
+    fun deleteZone(context: Context, id:Int, completionHandler: () -> Unit)
+    fun updateZone(context: Context, zone: Zone, completionHandler: () -> Unit)
 }

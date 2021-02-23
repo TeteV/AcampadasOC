@@ -41,72 +41,6 @@ class ServiceImpl: IVolleyService {
         ServiceSingleton.getInstance(context).addToRequestQueue(arrayRequest)
     }
 
-    override fun logIn(context: Context, operario: Operario, completionHandler: () -> Unit){
-        Log.v("LoginService", "Auqi")
-        val path = ServiceSingleton.getInstance(context).baseUrl + "login"
-        val operarioJson = JSONObject()
-        Log.v("LoginService", "Auqi1")
-        operarioJson.put("email", operario.email)
-        operarioJson.put("password", operario.password)
-        operarioJson.put("api_token", operario.api_token)
-        Log.v("LoginService", "Auqi2")
-        val objectRequest = JsonObjectRequest(Request.Method.POST, path, operarioJson,
-                { response ->
-                    completionHandler()
-                    Log.v("LoginService", "Auqi3")
-                    val plus = response?.opt("res")
-                    val tokn = response?.opt("api_token").toString()
-                    val id = response?.opt("id").toString()
-                    Log.v("LoginService", "plus: " + plus)
-                    Log.v("login", "token: " + tokn)
-                    Log.v("login", "Id: " + id)
-                    Log.v("login", "response: " + response.toString())
-                    if (plus == true) {
-                        Log.v("loginService", "Login correcto")
-                        val intent = Intent(context, ZoneActivity::class.java)
-                        /* intent.putExtra("api_token", tokn)
-                        intent.putExtra("id_user",id_us)*/
-                        context.startActivity(intent)
-                    } else {
-                        Log.v("loginService", "Login incorrecto")
-
-                    }
-                },
-                { error ->
-                    completionHandler()
-                    Log.v("login", "Error en login service")
-                })
-       ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
-    }
-
-    override fun createUser(context: Context, operario: Operario, completionHandler: () -> Unit) {
-        val path = ServiceSingleton.getInstance(context).baseUrl + "signin"
-        val operarioJson: JSONObject = JSONObject()
-        operarioJson.put("id", 0)
-        operarioJson.put("dni",operario.dni)
-        operarioJson.put("nombre",operario.nombre)
-        operarioJson.put("email",operario.email)
-        operarioJson.put("password",operario.password)
-
-        Log.v("createenService","Operario: "+operarioJson)
-
-        val objectRequest = JsonObjectRequest(Request.Method.POST, path, operarioJson,
-            { response -> completionHandler()
-                val plus = response?.opt("res")
-                if (plus==true){
-                    Log.v("AddUser","Creado")
-                }else{
-                    Log.v("AddUser", "Check Dni or Email")
-                    //Aqui Toast o algo para decir que mire
-                }
-            },
-            { error -> completionHandler()
-                Log.v("AddUser","Roto")
-            })
-        ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
-    }
-
-
     override fun getZoneById(context: Context, zoneId: Int, completionHandler: (response: Zone?) -> Unit) {
         val path = ServiceSingleton.getInstance(context).baseUrl + "zona/" + zoneId
         val objectRequest = JsonObjectRequest(Request.Method.GET, path, null,
@@ -245,4 +179,173 @@ class ServiceImpl: IVolleyService {
         ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
     }
 
+    /*----------------------Operarios-------------------------*/
+    override fun getOpById(context: Context, id: Int, completionHandler: (response: Operario?) -> Unit) {
+        val path = ServiceSingleton.getInstance(context).baseUrl + "operario-id/" + id
+        Log.v("GetbyidService","Path: "+ path)
+        val objectRequest = JsonArrayRequest(Request.Method.GET, path, null,
+                { response ->
+                    if(response == null) { completionHandler(null) }
+                    val requestedPost= response.getJSONObject(0)
+                    val id = requestedPost.getInt("id")
+                    val email = requestedPost.getString("email")
+                    val dni = requestedPost.getString("dni")
+                    val nombre = requestedPost.getString("nombre")
+                    Log.v("GetbyidService","email: "+email)
+
+                    val operario = Operario(id,email,"",nombre,dni,"")
+                    completionHandler(operario)
+                },
+                { error ->
+                    Log.v("holi","Error en getById")
+                    completionHandler(null)
+                })
+        ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
+    }
+    override fun updateUser(context: Context, operario: Operario, completionHandler: () -> Unit) {
+        val path = ServiceSingleton.getInstance(context).baseUrl + "update-operario/" + operario.id
+        val userJson: JSONObject = JSONObject()
+        userJson.put("dni", operario.dni)
+        userJson.put("nombre", operario.nombre)
+        userJson.put("email", operario.email)
+
+        val objectRequest = JsonObjectRequest(Request.Method.PUT, path, userJson,
+                { response ->
+                    Log.v("update","Se hizo")
+                    completionHandler()
+                },
+                { error ->
+                    completionHandler()
+                })
+       ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
+    }
+    override fun deleteUser(context: Context, id: Int, completionHandler: () -> Unit) {
+        val path = ServiceSingleton.getInstance(context).baseUrl + "delete-operario/" + id
+        val objectRequest = JsonObjectRequest(Request.Method.DELETE, path, null,
+                { response ->
+                    Log.v("borro", "se borró")
+                    completionHandler()
+                },
+                { error ->
+                    Log.v("borro", "error al borrar")
+                    completionHandler()
+                })
+        ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
+    }
+
+    /*------------------Auth Operarios-------------------------*/
+    override fun logIn(context: Context, operario: Operario, completionHandler: () -> Unit){
+        Log.v("LoginService", "Auqi")
+        val path = ServiceSingleton.getInstance(context).baseUrl + "login"
+        val operarioJson = JSONObject()
+        Log.v("LoginService", "Auqi1")
+        operarioJson.put("email", operario.email)
+        operarioJson.put("password", operario.password)
+        operarioJson.put("api_token", operario.api_token)
+        Log.v("LoginService", "Auqi2")
+        val objectRequest = JsonObjectRequest(Request.Method.POST, path, operarioJson,
+                { response ->
+                    completionHandler()
+                    Log.v("LoginService", "Auqi3")
+                    val plus = response?.opt("res")
+                    val tokn = response?.opt("api_token").toString()
+                    val id = response?.opt("id").toString()
+                    Log.v("LoginService", "plus: " + plus)
+                    Log.v("login", "token: " + tokn)
+                    Log.v("login", "Id: " + id)
+                    Log.v("login", "response: " + response.toString())
+                    if (plus == true) {
+                        Log.v("loginService", "Login correcto")
+                        val intent = Intent(context, ZoneActivity::class.java)
+                        /* intent.putExtra("api_token", tokn)
+                        intent.putExtra("id_user",id_us)*/
+                        context.startActivity(intent)
+                    } else {
+                        Log.v("loginService", "Login incorrecto")
+
+                    }
+                },
+                { error ->
+                    completionHandler()
+                    Log.v("login", "Error en login service")
+                })
+        ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
+    }
+    override fun createUser(context: Context, operario: Operario, completionHandler: () -> Unit) {
+        val path = ServiceSingleton.getInstance(context).baseUrl + "signin"
+        val operarioJson: JSONObject = JSONObject()
+        operarioJson.put("id", 0)
+        operarioJson.put("dni",operario.dni)
+        operarioJson.put("nombre",operario.nombre)
+        operarioJson.put("email",operario.email)
+        operarioJson.put("password",operario.password)
+
+        Log.v("createenService","Operario: "+operarioJson)
+
+        val objectRequest = JsonObjectRequest(Request.Method.POST, path, operarioJson,
+                { response -> completionHandler()
+                    val plus = response?.opt("res")
+                    if (plus==true){
+                        Log.v("AddUser","Creado")
+                    }else{
+                        Log.v("AddUser", "Check Dni or Email")
+                        //Aqui Toast o algo para decir que mire
+                    }
+                },
+                { error -> completionHandler()
+                    Log.v("AddUser","Roto")
+                })
+        ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
+    } //This is like the C of user CRUD
+    /*---------------------------------------------------------*/
+
+    override fun createZone(context: Context, zone: Zone, completionHandler: () -> Unit) {
+        val path = ServiceSingleton.getInstance(context).baseUrl + "add-zona"
+        val zoneJson: JSONObject = JSONObject()
+        zoneJson.put("id", 0)
+        zoneJson.put("nombre",zone.nombre)
+        zoneJson.put("localizacion",zone.localizacion)
+        zoneJson.put("url_img",zone.url_img)
+
+        Log.v("createenZoneSer","Zona: "+ zoneJson)
+
+        val objectRequest = JsonObjectRequest(Request.Method.POST, path, zoneJson,
+            { response -> completionHandler()
+                Log.v("Addzona","Creado")
+            },
+            { error -> completionHandler()
+                Log.v("Addzona","Roto")
+            })
+        ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
+    }
+    override fun deleteZone(context: Context, id: Int, completionHandler: () -> Unit) {
+        val path = ServiceSingleton.getInstance(context).baseUrl + "delete-zona/" + id
+        val objectRequest = JsonObjectRequest(Request.Method.DELETE, path, null,
+                { response ->
+                    Log.v("borro", "se borró")
+                    completionHandler()
+                },
+                { error ->
+                    Log.v("borro", "error al borrar")
+                    completionHandler()
+                })
+        ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
+    }
+    override fun updateZone(context: Context, zone: Zone, completionHandler: () -> Unit) {
+        val path = ServiceSingleton.getInstance(context).baseUrl + "update-zona/" + zone.id
+        val zoneJson: JSONObject = JSONObject()
+        zoneJson.put("nombre", zone.nombre)
+        zoneJson.put("localizacion", zone.localizacion)
+        zoneJson.put("url_img","")
+
+        val objectRequest = JsonObjectRequest(Request.Method.PUT, path, zoneJson,
+                { response ->
+                    Log.v("update","Se hizo")
+                    completionHandler()
+                },
+                { error ->
+                    completionHandler()
+                })
+        ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
+    }
 }

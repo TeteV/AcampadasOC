@@ -20,8 +20,8 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
-    private fun goToLoginActivity(){
-        val intent= Intent(this, LoginActivity::class.java)
+    private fun goToLoginActivity() {
+        val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
     }
 
@@ -29,4 +29,5 @@ class HomeActivity : AppCompatActivity() {
         val intent= Intent(this, RegisterActivity::class.java)
         startActivity(intent)
     }
+
 }
