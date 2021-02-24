@@ -36,8 +36,8 @@ class LoginActivity : AppCompatActivity() {
             run {
                 Log.v("LoginActc","Login creado")
 
-                /*intent.putExtra("api_token", user.api_token)
-                intent.putExtra("iduser", user.userId)
+                /*intent.putExtra("api_token", operario.api_token)
+                intent.putExtra("iduser", operario.id)
                 context.startActivity(intent)*/
             }
         }

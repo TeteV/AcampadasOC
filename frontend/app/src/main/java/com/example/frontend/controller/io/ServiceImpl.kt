@@ -257,8 +257,8 @@ class ServiceImpl: IVolleyService {
                     if (plus == true) {
                         Log.v("loginService", "Login correcto")
                         val intent = Intent(context, ZoneActivity::class.java)
-                        /* intent.putExtra("api_token", tokn)
-                        intent.putExtra("id_user",id_us)*/
+                        intent.putExtra("api_token", tokn)
+                        intent.putExtra("id_user",id)
                         context.startActivity(intent)
                     } else {
                         Log.v("loginService", "Login incorrecto")
