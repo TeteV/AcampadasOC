@@ -33,6 +33,7 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->get('operario-id/{id}', ['as' => 'operario.show', 'uses' => 'OperarioController@getById']);
     $router->delete('delete-operario/{id}', ['as' => 'operario.delete', 'uses' => 'OperarioController@delete']);
     $router->put('update-operario/{id}', ['as' => 'operario.update', 'uses' => 'OperarioController@update']);
+    $router->post('uploadfoto/{file}', ['as' => 'operario.upload', 'uses' => 'OperarioController@loadImage']);
 
 // API route group
     // Matches "/api/zona"
@@ -40,11 +41,11 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     // Matches "/api/zona/{id}"
     $router->get('zona/{id}', ['as' => 'zona.show', 'uses' => 'ZonaController@show']);
     // Matches "/api/zona/{id}"
-    $router->delete('zona/{id}', ['as' => 'zona.delete', 'uses' => 'ZonaController@delete']);
+    $router->delete('delete-zona/{id}', ['as' => 'zona.delete', 'uses' => 'ZonaController@delete']);
     // Matches "/api/zona/{id}"
-    $router->put('zona/{id}', ['as' => 'zona.updatePost', 'uses' => 'ZonaController@updatePost']);
+    $router->put('update-zona/{id}', ['as' => 'zona.updatePost', 'uses' => 'ZonaController@updatePost']);
     // Matches "/api/zona"
-    $router->post('zona', ['as' => 'zona.createPost', 'uses' => 'ZonaController@createPost']);
+    $router->post('add-zona', ['as' => 'zona.createPost', 'uses' => 'ZonaController@createPost']);
 
     // Matches "/api/persona"
     $router->get('persona', ['as' => 'persona', 'uses' => 'PersonaController@index']);
