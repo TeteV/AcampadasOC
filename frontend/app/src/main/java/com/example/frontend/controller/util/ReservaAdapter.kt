@@ -71,6 +71,7 @@ class ReservaAdapter (var reservaList: ArrayList<Reserva>, val context: Context)
                         intent.putExtra("checkin", b.checkin)
                         intent.putExtra("zoneId", b.id_zona)
                         intent.putExtra("personId", response?.id)
+                        intent.putExtra("personName", response?.name)
                         intent.putExtra("state", "Showing")
                         context.startActivity(intent)
                     }

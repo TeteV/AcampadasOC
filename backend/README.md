@@ -1,24 +1,77 @@
-# Lumen PHP Framework
+# Canarias Camping
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
+[Lumen](https://lumen.laravel.com/) Laravel Website. \
+[Kotlin](https://kotlinlang.org/) Kotlin Website.
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+## First of all
+Download this repository, has a frontend and backend folder
 
-## Official Documentation
+## Backend
+Go to the backend folder with your favourite ide and type in terminal
+```
+composer install
+```
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+In your DB gestor create a new database for this project.
+```
+create database DBNAME;
+```
 
-## Contributing
+Rename ".env.example" to .env and change some things in archive like you have in your DB
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=DBNAME
+DB_USERNAME=USERNAME
+DB_PASSWORD=USERPSWD
+```
+### To migrate Database
+```
+php artisan migrate
+```
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+This is for start the local server in your PC
+```
+php -S yourIp:8000 -t ./public
+```
 
-## Security Vulnerabilities
+## Frontend
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+Go to the frontend folder and open it with your IDE, must to go to the following route\
+and make some changes.
+```
+app/java/com.example.frontend.controller \
+io.ServiceSingleton
+```
+The change must to change is baseUrl with youp IpAdress:8000/api/
 
-## License
+Another change is in route
+```
+app/java/com.example.frontend.controller \
+ui.CreateReservaActivity
+```
+Near Line 33 in getZone() change url with youp IpAdress:8000/img/
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Another change is in route
+```
+app/java/com.example.frontend.controller \
+ui.WebView
+```
+In line 14, change the url with youp IpAdress:8000/help
+
+### Final Steps
+Once in the backend folder your server is ON, you can press the play ▶️ button (AndroidStudio)
+and the emulator starts running
+
+# Aditional content
+once the app is running you must to create an account and login to enjoy it
+
+## Made with
+[Php Storm](https://www.jetbrains.com/es-es/phpstorm/) Website.\
+[Android Studio](https://developer.android.com/studio) Website.
+
+Readme.md template by [Villanuevand](https://gist.github.com/Villanuevand/6386899f70346d4580c723232524d35a)
+
+---
+💻 with 💜 by [TeteV](https://github.com/TeteV) 🐦 & [Javi Medina](https://github.com/JavierMedina11)

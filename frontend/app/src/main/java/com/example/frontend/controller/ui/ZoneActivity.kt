@@ -2,12 +2,12 @@ package com.example.frontend.controller.ui
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
 import androidx.recyclerview.widget.RecyclerView
@@ -17,8 +17,14 @@ import com.example.frontend.controller.models.Zone
 import com.example.frontend.controller.util.ZoneAdapter
 import com.example.frontend.databinding.ActivityZoneBinding
 import com.google.zxing.integration.android.IntentIntegrator
+import com.example.frontend.controller.util.PreferenceHelper
+import com.example.frontend.controller.util.PreferenceHelper.set
 
 class ZoneActivity : AppCompatActivity() {
+
+    private val preferences by lazy {
+        PreferenceHelper.defaultPrefs(this)
+    }
 
     private lateinit var zones: ArrayList<Zone>
     private lateinit var recyclerView: RecyclerView
@@ -43,6 +49,25 @@ class ZoneActivity : AppCompatActivity() {
         recyclerView.layoutManager = viewManager
         // specify an viewAdapter (see also next example)
         recyclerView.adapter = viewAdapter
+
+        val num : Int = this.intent.getIntExtra("num",0)
+
+        val tokenGE : String = this.intent.getStringExtra("api_token").toString()
+        val opeIdGE : String = this.intent.getStringExtra("opeId").toString()
+        Log.v("ZoneActiGE",opeIdGE)
+        Log.v("ZoneActiEG",tokenGE)
+        Log.v("ZoneActiNumEG", num.toString())
+
+        if (num==1){
+            Log.v("Create Pref","Create Pref")
+            createSessionPreference(tokenGE, opeIdGE.toInt())
+        }
+
+        val opeIdPref = preferences.getInt("opeId", 0)
+        val tokenPref = preferences.getString("token", null)
+        Log.v("ZoneActi ID pref", opeIdPref.toString())
+        Log.v("ZoneActi token pref",tokenPref.toString())
+
         getAllRooms()
         listeners()
     }
@@ -82,9 +107,9 @@ class ZoneActivity : AppCompatActivity() {
                 Toast.makeText(this, "cancelado", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(
-                    this,
-                    "el valor escaneado es: ${result.contents}",
-                    Toast.LENGTH_SHORT
+                        this,
+                        "el valor escaneado es: ${result.contents}",
+                        Toast.LENGTH_SHORT
                 ).show()
             }
         } else {
@@ -104,5 +129,14 @@ class ZoneActivity : AppCompatActivity() {
         }
     }
 
+    private fun createSessionPreference(tokenPref: String, opeId: Int) {
+        val preferences = PreferenceHelper.defaultPrefs(this)
+        preferences["tokenPref"] = tokenPref
+        preferences["opeId"] = opeId
+    }
 
 }
+
+
+
+

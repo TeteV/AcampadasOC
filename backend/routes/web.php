@@ -73,5 +73,5 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     // Matches "/api/zona/{id}"
     $router->put('reservaUpdate/{id}', ['as' => 'reserva.updatePost', 'uses' => 'ReservaController@updatePost']);
     // Matches "/api/zona"
-    $router->post('reserva', ['as' => 'reserva.createPost', 'uses' => 'ReservaController@createPost']);
+    $router->post('reservaCreate', ['as' => 'reserva.createPost', 'uses' => 'ReservaController@createPost']);
 });

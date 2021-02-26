@@ -24,6 +24,7 @@ import com.example.frontend.controller.models.Zone
 import com.example.frontend.controller.util.ReservaAdapter
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_list.*
+import kotlinx.android.synthetic.main.activity_reserva_detallada.*
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -66,6 +67,12 @@ class ListActivity : AppCompatActivity() {
         val prueba = "1";
 
         getBookingsDate(zoneId, obtenerFechaActual(timeZone).toString())
+
+        imageButtonCreate.setOnClickListener {
+            val intent = Intent(this, CreateReservaActivity::class.java)
+            intent.putExtra("zoneId", zoneId)
+            startActivity(intent)
+        }
 
         listeners()
     }

@@ -6,6 +6,7 @@ import android.icu.util.Calendar
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
@@ -14,6 +15,7 @@ import com.example.frontend.controller.io.ServiceImpl
 import com.example.frontend.controller.models.Reserva
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_reserva_detallada.*
+import org.w3c.dom.Text
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -35,12 +37,33 @@ class ReservaDetalladaActivity : AppCompatActivity() {
 
         getBooking(reservaId)
 
+        getPerson(personId)
+
         buttonCheckIn.setOnClickListener {
             val reserva = Reserva(reservaId, personId, textEntrada.text.toString(), textEntrada2.text.toString(), localizador.toString(), numPersonsR.text.toString().toInt(),
                     numVehiculosR.text.toString().toInt(), "1", obtenerFechaActual(timeZone).toString(), zoneId)
             updateBooking(reserva)
         }
 
+        buttonDeleteReserva.setOnClickListener {
+            deleteBooking(reservaId)
+        }
+
+        buttonUpdateReserva.setOnClickListener {
+            val bicycleServiceImpl = ServiceImpl()
+            bicycleServiceImpl.getBookingById(this, reservaId) { response ->
+                run {
+                    val intent = Intent(this, UpdateReservaActivity::class.java)
+                    intent.putExtra("personId", personId)
+                    intent.putExtra("reservaId", reservaId)
+                    intent.putExtra("localizador", localizador)
+                    intent.putExtra("zoneId", zoneId)
+                    intent.putExtra("checkin", response?.checkin ?: "")
+                    intent.putExtra("fecha_checkin", response?.fecha_checkin ?: "")
+                    startActivity(intent)
+                }
+            }
+        }
     }
 
     private fun getZone(zoneId: Int) {
@@ -84,6 +107,23 @@ class ReservaDetalladaActivity : AppCompatActivity() {
         }
     }
 
+    private fun getPerson(userId: Int){
+        val serviceImpl = ServiceImpl()
+        serviceImpl.getPersonById(this, userId) { response ->
+            run {
+                val url = "http://192.168.56.1:8000/img/"
+                val imagePerson: ImageView = findViewById(R.id.imagenPerfilReserva)
+                val personNameTV: TextView= findViewById(R.id.textViewNameDude)
+                val personNamePUT = this.intent.getStringExtra("personName").toString()
+                Log.v("GetPerson", personNamePUT)
+                personNameTV.setText(personNamePUT)
+
+                val imageUrl = url + response?.url_img  + ".png"
+                Picasso.with(this).load(imageUrl).into(imagePerson);
+            }
+        }
+    }
+
     private fun updateBooking(reserva: Reserva) {
         val bookingServiceImpl = ServiceImpl()
         bookingServiceImpl.updateReserve(this, reserva) { ->
@@ -93,6 +133,18 @@ class ReservaDetalladaActivity : AppCompatActivity() {
             }
         }
     }
+
+    private fun deleteBooking(reservaId: Int){
+        val bicycleServiceImpl = ServiceImpl()
+        bicycleServiceImpl.deleteByReservaId(this, reservaId) { ->
+            run {
+                val intent = Intent(this, ListActivity::class.java)
+                this.startActivity(intent)
+                finish()
+            }
+        }
+    }
+
 
     @RequiresApi(Build.VERSION_CODES.N)
     @SuppressLint("SimpleDateFormat")

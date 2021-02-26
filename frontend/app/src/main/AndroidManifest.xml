@@ -22,18 +22,17 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".controller.ui.addZoneActivity"></activity>
-        <activity android:name=".controller.ui.UserProfileActivity" />
-        <activity android:name=".controller.ui.ReservaDetalladaActivity" />
+        <activity android:name=".controller.ui.CreateReservaActivity" />
+        <activity android:name=".controller.ui.UpdateReservaActivity" />
         <activity android:name=".controller.ui.RegisterActivity" />
+        <activity android:name=".controller.ui.ReservaDetalladaActivity" />
+        <activity android:name=".controller.ui.addZoneActivity" />
+        <activity android:name=".controller.ui.UserProfileActivity" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="portrait"
             tools:replace="screenOrientation" />
         <activity android:name=".controller.ui.WebView" />
-        <activity android:name=".controller.ui.ZoneActivity" />
-        <activity android:name=".controller.ui.ListActivity" />
-        <activity android:name=".controller.ui.LoginActivity" />
         <activity android:name=".controller.ui.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,6 +40,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".controller.ui.ListActivity" />
+        <activity android:name=".controller.ui.LoginActivity" />
+        <activity android:name=".controller.ui.ZoneActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

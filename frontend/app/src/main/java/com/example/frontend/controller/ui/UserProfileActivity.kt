@@ -3,30 +3,29 @@ package com.example.frontend.controller.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.app.Activity
-import android.net.Uri
-import java.io.IOException
 import android.util.Log
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.android.volley.Request
-import com.android.volley.Response
-import com.android.volley.toolbox.Volley
 import com.example.frontend.R
 import com.example.frontend.controller.io.ServiceImpl
 import com.example.frontend.controller.models.Operario
-import kotlinx.android.synthetic.*
-import kotlinx.android.synthetic.main.activity_user_profile.*
+import com.example.frontend.controller.util.PreferenceHelper
 
 class UserProfileActivity : AppCompatActivity() {
+
+    private val preferences by lazy {
+        PreferenceHelper.defaultPrefs(this)
+    }
+    
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_profile)
-        val id =4
+
+        val id = preferences.getInt("opeId", 0)
+        Log.v("USerPrfID",id.toString())
         getById(id)
         listeners()
 
@@ -77,9 +76,9 @@ class UserProfileActivity : AppCompatActivity() {
     }*/
 
     private fun toastDeleteOp() {
-        val id =3
         val nombre: String = findViewById<TextView>(R.id.editTextName).text.toString()
         val builder = AlertDialog.Builder(this)
+        val id = preferences.getInt("opeId", 0)
         builder.setTitle("Delete")
         builder.setMessage("Are you sure to delete you account " + nombre + " ?")
 
@@ -102,7 +101,7 @@ class UserProfileActivity : AppCompatActivity() {
     }
 
     private fun updateInfo() {
-        val id =4
+        val id = preferences.getInt("opeId", 0)
         val dni: String = findViewById<TextView>(R.id.editTextDni).text.toString()
         val nombre: String = findViewById<TextView>(R.id.editTextName).text.toString()
         val email: String = findViewById<TextView>(R.id.editTextEmail).text.toString()

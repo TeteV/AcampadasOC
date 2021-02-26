@@ -16,17 +16,18 @@ class HomeActivity : AppCompatActivity() {
         }
 
         textViewSignIn.setOnClickListener {
-            goToSignInActivity()
+            goToRegisterActivity()
         }
     }
 
-    private fun goToSignInActivity() {
+    private fun goToLoginActivity() {
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun goToRegisterActivity() {
         val intent= Intent(this, RegisterActivity::class.java)
         startActivity(intent)
     }
 
-    private fun goToLoginActivity(){
-        val intent= Intent(this, LoginActivity::class.java)
-        startActivity(intent)
-    }
 }
