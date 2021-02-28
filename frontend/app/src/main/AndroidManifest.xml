@@ -22,6 +22,7 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
+        <activity android:name=".controller.ui.UpdateZoneActivity"></activity>
         <activity android:name=".controller.ui.CreateReservaActivity" />
         <activity android:name=".controller.ui.UpdateReservaActivity" />
         <activity android:name=".controller.ui.RegisterActivity" />
@@ -42,7 +43,9 @@
         </activity>
         <activity android:name=".controller.ui.ListActivity" />
         <activity android:name=".controller.ui.LoginActivity" />
-        <activity android:name=".controller.ui.ZoneActivity" />
+        <activity android:name=".controller.ui.ZoneActivity" >
+
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"

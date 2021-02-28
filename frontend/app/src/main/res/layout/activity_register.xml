@@ -14,7 +14,8 @@
         android:layout_height="238.06dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/moon"
-        android:translationX="-60dp"
+        android:translationX="-100dp"
+        android:translationY="-110dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,30 +23,87 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="256dp"
-        android:fontFamily="@font/quicksand_light"
-        android:text="Create Here Your Account"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="144dp"
         android:fontFamily="@font/ubuntu_bold"
         android:text="Welcome"
         android:textColor="@color/light_green"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/moon"
+        android:layout_width="1105dp"
+        android:layout_height="565.45dp"
+        android:layout_marginTop="552dp"
+        android:background="@drawable/collage"
+        android:translationY="-60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/user_dni_input"
+        android:layout_width="311dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="328dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/input_dni"
+        app:layout_constraintBottom_toTopOf="@+id/user_name_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.99" />
+
+    <ImageView
+        android:id="@+id/user_name_input"
+        android:layout_width="311dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="328dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/input_user"
+        app:layout_constraintBottom_toTopOf="@+id/user_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/user_input"
+        android:layout_width="311dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="408dp"
+        android:background="@drawable/input_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/user_input2"
+        android:layout_width="311dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/input_user2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_input" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="188dp"
+        android:fontFamily="@font/quicksand_light"
+        android:text="Create Here Your Account"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -74,18 +132,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/user_dni_input"
-        android:layout_width="311dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="328dp"
-        android:layout_marginBottom="14dp"
-        android:background="@drawable/input_user"
-        app:layout_constraintBottom_toTopOf="@+id/user_name_input"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+
 
     <EditText
         android:id="@+id/inputDni"
@@ -102,19 +149,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/user_dni_input" />
 
-    <ImageView
-        android:id="@+id/user_name_input"
-        android:layout_width="311dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="328dp"
-        android:layout_marginBottom="14dp"
-        android:background="@drawable/input_user"
-        app:layout_constraintBottom_toTopOf="@+id/user_input"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
     <EditText
         android:id="@+id/inputName"
         android:layout_width="206dp"
@@ -129,16 +163,6 @@
         app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/user_name_input" />
-
-    <ImageView
-        android:id="@+id/user_input"
-        android:layout_width="311dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="472dp"
-        android:background="@drawable/input_user"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/input"
@@ -155,16 +179,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/user_input" />
 
-    <ImageView
-        android:id="@+id/user_input2"
-        android:layout_width="311dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="552dp"
-        android:background="@drawable/input_user2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/imput2"
         android:layout_width="206dp"
@@ -180,25 +194,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/user_input2" />
 
-    <ImageView
-        android:id="@+id/moon"
-        android:layout_width="1105dp"
-        android:layout_height="565.45dp"
-        android:layout_marginTop="552dp"
-        android:background="@drawable/collage"
-        android:translationY="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
 
     <Button
         android:id="@+id/buttonSingIn"
         android:layout_width="223dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="92dp"
         android:background="@drawable/bg_button"
         android:fontFamily="@font/ubuntu_bold_italic"
         android:text="Sign In"

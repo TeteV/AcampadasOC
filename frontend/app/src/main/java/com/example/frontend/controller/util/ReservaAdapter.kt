@@ -5,14 +5,13 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.frontend.R
 import com.example.frontend.controller.io.ServiceImpl
 import com.example.frontend.controller.models.Reserva
-import com.example.frontend.controller.models.Zone
-import com.example.frontend.controller.ui.ListActivity
 import com.example.frontend.controller.ui.ReservaDetalladaActivity
 import com.squareup.picasso.Picasso
 
@@ -24,6 +23,7 @@ class ReservaAdapter (var reservaList: ArrayList<Reserva>, val context: Context)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.itemView.setAnimation(AnimationUtils.loadAnimation(context, R.anim.item_animation_from_right))
         holder.bindView(reservaList[position], context)
     }
 

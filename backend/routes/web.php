@@ -65,6 +65,7 @@ $router->group(['prefix' => 'api'], function () use ($router) {
 
     // Matches "/api/reserva_zone/{id_zona}"
     //$router->get('reserva_zone/{id_zona}', ['as' => 'reserva.showReservZone', 'uses' => 'ReservaController@showReservZone']);
+    $router->get('reserva_local/{localizador}', ['as' => 'reserva.showReservLocalizador', 'uses' => 'ReservaController@showReservLocalizador']);
     // Matches "/api/reserva_zone/{id_zona}/{data_picker}"
     $router->get('reserva_zone/{id_zona}/{date_picker}', ['as' => 'reserva.showReservZoneDate', 'uses' => 'ReservaController@showReservZoneDate']);
 

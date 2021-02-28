@@ -30,7 +30,6 @@ class ZonaController extends Controller{
         return "Post has been created!";
     }
 
-
     //PUT
     public function updatePost(Request $request){
         $zona = Zona::where('id', $request->id)->first();

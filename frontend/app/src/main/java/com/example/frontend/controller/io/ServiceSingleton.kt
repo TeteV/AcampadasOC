@@ -9,35 +9,35 @@ import com.android.volley.toolbox.ImageLoader
 import com.android.volley.toolbox.Volley
 
 class ServiceSingleton constructor(context: Context) {
-    val baseUrl = "http://192.168.103.46:8000/api/"
-     //val baseUrl = "http://192.168.1.54:8000/api/"
+    val baseUrl = "http://192.168.56.1:8000/api/"
+    //val baseUrl = "http://192.168.1.54:8000/api/"
 
     //val baseUrl = "http://192.168.56.1:8000/api/"
-     //val baseUrl = "http://192.168.1.129:8000/api/"
+    //val baseUrl = "http://192.168.1.129:8000/api/"
 
     companion object {
         @Volatile
         private var INSTANCE: ServiceSingleton? = null
 
         fun getInstance(context: Context) =
-            INSTANCE ?: synchronized(this) {
-                INSTANCE ?: ServiceSingleton(context).also {
-                    INSTANCE = it
+                INSTANCE ?: synchronized(this) {
+                    INSTANCE ?: ServiceSingleton(context).also {
+                        INSTANCE = it
+                    }
                 }
-            }
     }
 
     val imageLoader: ImageLoader by lazy {
         ImageLoader(requestQueue,
-            object : ImageLoader.ImageCache {
-                private val cache = LruCache<String, Bitmap>(20)
-                override fun getBitmap(url: String): Bitmap {
-                    return cache.get(url)
-                }
-                override fun putBitmap(url: String, bitmap: Bitmap) {
-                    cache.put(url, bitmap)
-                }
-            })
+                object : ImageLoader.ImageCache {
+                    private val cache = LruCache<String, Bitmap>(20)
+                    override fun getBitmap(url: String): Bitmap {
+                        return cache.get(url)
+                    }
+                    override fun putBitmap(url: String, bitmap: Bitmap) {
+                        cache.put(url, bitmap)
+                    }
+                })
     }
 
     val requestQueue: RequestQueue by lazy {

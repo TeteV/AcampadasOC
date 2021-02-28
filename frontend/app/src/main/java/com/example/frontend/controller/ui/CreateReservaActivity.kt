@@ -21,7 +21,7 @@ class CreateReservaActivity : AppCompatActivity() {
         getZone(zoneId)
 
         buttonUpdate.setOnClickListener {
-            val reserva = Reserva(10, 1, fechaEntradaC.text.toString(), fechaSalidaC.text.toString(), "1", numPC.text.toString().toInt(), numVC.text.toString().toInt(), "0", "", zoneId)
+            val reserva = Reserva(10, 1, fechaEntradaC.text.toString(), fechaSalidaC.text.toString(), "1", numPC.text.toString().toInt(), numVC.text.toString().toInt(), "0", "0", zoneId)
             createReserve(reserva)
         }
     }

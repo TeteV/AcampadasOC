@@ -25,25 +25,19 @@ class UserProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_user_profile)
 
         val id = preferences.getInt("opeId", 0)
-        Log.v("USerPrfID",id.toString())
         getById(id)
         listeners()
 
     }
 
-
-
     private fun listeners() {
         val logoutBtn = findViewById<Button>(R.id.logoutBtn)
         logoutBtn.setOnClickListener {
-            //logOutUser()
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
-
-        /*val imgBtn = findViewById<Button>(R.id.imageBtn)
-        imgBtn.setOnClickListener {
-            Log.v("ImgBtn","tocao")
-            //cargarImagen()
-        }*/
 
         val updateBtn = findViewById<Button>(R.id.updateBtn)
         updateBtn.setOnClickListener {
@@ -57,23 +51,6 @@ class UserProfileActivity : AppCompatActivity() {
 
 
     }
-
-
-
-    /*private fun cargarImagen() {
-        val intent= Intent(Intent.ACTION_PICK,MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-        intent.setType("image/")
-        startActivityForResult(intent.createChooser(intent,"sele"),010)
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        val imagen = findViewById<ImageView>(R.id.imageViewPhoto)
-        if (resultCode== RESULT_OK){
-            val path=data.
-            imagen.setImageURI(path)
-        }
-    }*/
 
     private fun toastDeleteOp() {
         val nombre: String = findViewById<TextView>(R.id.editTextName).text.toString()
@@ -145,7 +122,7 @@ class UserProfileActivity : AppCompatActivity() {
     }
 
     private fun getById(id: Int) {
-        Log.v("Getbyid", "Estoy aqui: "+id)
+        Log.v("Getbyid", "Estoy aqui: " + id)
         val ServiceImpl = ServiceImpl()
         ServiceImpl.getOpById(this, id) { response ->
             run {
@@ -153,15 +130,11 @@ class UserProfileActivity : AppCompatActivity() {
                 val nombreTV: TextView = findViewById(R.id.textViewName)
                 val email: TextView = findViewById(R.id.editTextEmail)
                 val dni: TextView = findViewById(R.id.editTextDni)
-                //val url = "http://192.168.203.73:8000/users_image/"//clase
-                //val url = "http://192.168.1.129:8000/users_image/"//casa
 
-                nombreTV.setText(response?.nombre ?: "")
-                nombre.setText(response?.nombre ?: "")
-                email.setText(response?.email ?: "")
-                dni.setText(response?.dni ?: "")
-                /*val imageUrl = url + r.url_img
-                Picasso.with(context).load(imageUrl).into(img);*/
+                nombreTV.setText(response?.nombre ?: "a")
+                nombre.setText(response?.nombre ?: "a")
+                email.setText(response?.email ?: "a")
+                dni.setText(response?.dni ?: "a")
             }
         }
     }

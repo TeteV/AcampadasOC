@@ -14,7 +14,7 @@ class WebView : AppCompatActivity() {
         val myWebView: WebView = findViewById(R.id.webview)
         //JAvi myWebView.loadUrl("http://192.168.56.1:8000/help")
         //myWebView.loadUrl("http://192.168.103.46:8000/help")
-        myWebView.loadUrl("http://192.168.103.46:8080/AyudaCanaryCamp.html")
+        myWebView.loadUrl("http://192.168.56.1:8080/Ayuda%20Proyecto%20Enlaza%20-%201%C2%BA%20Evaluaci%C3%B3n.html")
 
         val backBtn = findViewById<Button>(R.id.backBtn)
         backBtn.setOnClickListener {

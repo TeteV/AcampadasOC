@@ -13,6 +13,12 @@ import com.example.frontend.controller.models.Operario
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
+
+    override fun onBackPressed(){
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -23,6 +29,8 @@ class LoginActivity : AppCompatActivity() {
             goToMainActivity()
         }*/
     }
+
+
 
     private fun goToMainActivity(){
         val intent= Intent(this, ZoneActivity::class.java)
@@ -35,10 +43,7 @@ class LoginActivity : AppCompatActivity() {
         {
             run {
                 Log.v("LoginActc","Login creado")
-
-                /*intent.putExtra("api_token", operario.api_token)
-                intent.putExtra("iduser", operario.id)
-                context.startActivity(intent)*/
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
             }
         }
     }

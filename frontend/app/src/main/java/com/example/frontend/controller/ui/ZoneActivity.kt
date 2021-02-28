@@ -91,6 +91,7 @@ class ZoneActivity : AppCompatActivity() {
         profibleBtn.setOnClickListener {
             val intent = Intent(this, UserProfileActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         val addZoneBtn = findViewById<Button>(R.id.addZoneBtn)

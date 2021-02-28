@@ -34,7 +34,7 @@ class addZoneActivity : AppCompatActivity() {
         Log.v("Addzone","Loca: "+localizacion)
         Log.v("Addzone","nomrbe: "+nombre)
 
-        val zone = Zone(0,nombre,localizacion ,"")
+        val zone = Zone(0,nombre,localizacion ,"prueba3")
         Log.v("Create", zone.toString())
         createZone(zone)
     }
@@ -44,8 +44,8 @@ class addZoneActivity : AppCompatActivity() {
         ServiceImpl.createZone(this, zone) { ->
             run {
                 Log.v("createZone","ZonaCreada")
-                /*val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent)*/
+                val intent = Intent(this, ZoneActivity::class.java)
+                startActivity(intent)
             }
         }
     }
