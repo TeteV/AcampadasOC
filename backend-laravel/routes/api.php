@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ZonaController;
 use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\OperarioController;
+use PHPJasper\PHPJasper;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,3 +55,47 @@ Route::get('/reserva_zone/{id_zona}/{date_picker}', [ReservaController::class, '
 Route::delete('/reserva/{id}', [ReservaController::class, 'delete']);
 Route::put('/reservaUpdate/{id}', [ReservaController::class, 'updatePost']);
 Route::post('/reservaCreate', [ReservaController::class, 'createPost']);
+
+Route::get('/compilarReporteParametros', function () {
+    $input = base_path() .
+        '/vendor/geekcom/phpjasper/examples/zonasAca.jrxml';
+
+    $jasper = new PHPJasper;
+    $jasper->compile($input)->execute();
+
+    return response()->json([
+        'status' => 'ok',
+        'msj' => '¡Reporte compilado!'
+    ]);
+});
+
+Route::get('/reporteParametros', function () {
+    $input = base_path() .
+        '/vendor/geekcom/phpjasper/examples/zonasAca.jasper';
+    $output = base_path() .
+        '/vendor/geekcom/phpjasper/examples';
+    $options = [
+        'format' => ['pdf'],
+        'params' => [],
+        'db_connection' => [
+            'driver' => 'mysql', //mysql, ....
+            'username' => 'root',
+            'password' => 'root',
+            'host' => '127.0.0.1',
+            'database' => 'acampadasOC2',
+            'port' => '3306'
+        ]
+    ];
+
+    $jasper = new PHPJasper;
+
+    $jasper->process(
+        $input,
+        $output,
+        $options
+    )->execute();
+
+    $pathToFile = base_path() .
+        '/vendor/geekcom/phpjasper/examples/zonasAca.pdf';
+    return response()->file($pathToFile);
+});

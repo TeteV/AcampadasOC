@@ -12,6 +12,7 @@
         "beyondcode/laravel-websockets": "^1.11",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
+        "geekcom/phpjasper": "^3.3",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",

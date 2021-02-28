@@ -20,44 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fb85044-f59d-476d-b07e-44128cfe35d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/public/img/persona1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/public/img/persona2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/public/img/persona3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/models/Persona.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/models/Reserva.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/RegisterActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/ReservaDetalladaActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/util/ReservaAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/drawable/bg_button_checked.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/drawable/bg_listop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/drawable/icon_checked.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/drawable/icon_nonchecked.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/drawable/reservas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/drawable/rounded_image_view.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/layout/activity_register.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/layout/activity_reserva_detallada.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/layout/item_container_reservas.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/src/main/res/values/ids.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/Http/Controllers/PersonaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Controllers/PersonaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/Http/Controllers/ReservaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Controllers/ReservaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/Models/Persona.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Models/Persona.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/Models/Reserva.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Models/Reserva.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database/migrations/2021_02_09_152956_persona.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/migrations/2021_02_09_152956_persona.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database/migrations/2021_02_09_152957_reserva.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/migrations/2021_02_09_152957_reserva.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/ListActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/ListActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/ZoneActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/util/ZoneAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/util/ZoneAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/res/layout-v21/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/res/layout/activity_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/res/layout/activity_list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/res/layout/activity_zone.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_02_2021_18_42_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_02_2021_18_42__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-laravel/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-laravel/.idea/backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backend-laravel/.idea/backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-laravel/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend-laravel/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-laravel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend-laravel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-laravel/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend-laravel/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-laravel/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/backend-laravel/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-laravel/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend-laravel/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/io/ServiceSingleton.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/io/ServiceSingleton.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,29 +69,46 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
+      <path value="$PROJECT_DIR$/backend/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/backend/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/backend/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/backend/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/backend/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/backend/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/backend/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/backend/vendor/composer" />
       <path value="$PROJECT_DIR$/backend/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/backend/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/backend/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/backend/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/backend/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/backend/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/backend/vendor/graham-campbell/result-type" />
       <path value="$PROJECT_DIR$/backend/vendor/hamcrest/hamcrest-php" />
-      <path value="$PROJECT_DIR$/backend/vendor/phpoption/phpoption" />
-      <path value="$PROJECT_DIR$/backend/vendor/sebastian/cli-parser" />
-      <path value="$PROJECT_DIR$/backend/vendor/sebastian/code-unit" />
-      <path value="$PROJECT_DIR$/backend/vendor/sebastian/code-unit-reverse-lookup" />
-      <path value="$PROJECT_DIR$/backend/vendor/sebastian/comparator" />
-      <path value="$PROJECT_DIR$/backend/vendor/sebastian/complexity" />
-      <path value="$PROJECT_DIR$/backend/vendor/sebastian/diff" />
-      <path value="$PROJECT_DIR$/backend/vendor/sebastian/environment" />
-      <path value="$PROJECT_DIR$/backend/vendor/sebastian/exporter" />
-      <path value="$PROJECT_DIR$/backend/vendor/sebastian/global-state" />
-      <path value="$PROJECT_DIR$/backend/vendor/sebastian/lines-of-code" />
-      <path value="$PROJECT_DIR$/backend/vendor/sebastian/object-enumerator" />
-      <path value="$PROJECT_DIR$/backend/vendor/sebastian/object-reflector" />
-      <path value="$PROJECT_DIR$/backend/vendor/sebastian/recursion-context" />
-      <path value="$PROJECT_DIR$/backend/vendor/sebastian/resource-operations" />
-      <path value="$PROJECT_DIR$/backend/vendor/sebastian/type" />
-      <path value="$PROJECT_DIR$/backend/vendor/sebastian/version" />
-      <path value="$PROJECT_DIR$/backend/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/backend/vendor/illuminate/auth" />
       <path value="$PROJECT_DIR$/backend/vendor/illuminate/broadcasting" />
       <path value="$PROJECT_DIR$/backend/vendor/illuminate/bus" />
@@ -144,32 +135,20 @@
       <path value="$PROJECT_DIR$/backend/vendor/illuminate/translation" />
       <path value="$PROJECT_DIR$/backend/vendor/illuminate/validation" />
       <path value="$PROJECT_DIR$/backend/vendor/illuminate/view" />
-      <path value="$PROJECT_DIR$/backend/vendor/dragonmantank/cron-expression" />
-      <path value="$PROJECT_DIR$/backend/vendor/phpdocumentor/reflection-common" />
-      <path value="$PROJECT_DIR$/backend/vendor/phpdocumentor/reflection-docblock" />
-      <path value="$PROJECT_DIR$/backend/vendor/phpdocumentor/type-resolver" />
-      <path value="$PROJECT_DIR$/backend/vendor/graham-campbell/result-type" />
-      <path value="$PROJECT_DIR$/backend/vendor/composer" />
-      <path value="$PROJECT_DIR$/backend/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/backend/vendor/psr/event-dispatcher" />
-      <path value="$PROJECT_DIR$/backend/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/backend/vendor/psr/simple-cache" />
-      <path value="$PROJECT_DIR$/backend/vendor/opis/closure" />
-      <path value="$PROJECT_DIR$/backend/vendor/voku/portable-ascii" />
-      <path value="$PROJECT_DIR$/backend/vendor/brick/math" />
-      <path value="$PROJECT_DIR$/backend/vendor/nikic/fast-route" />
-      <path value="$PROJECT_DIR$/backend/vendor/nikic/php-parser" />
-      <path value="$PROJECT_DIR$/backend/vendor/nesbot/carbon" />
-      <path value="$PROJECT_DIR$/backend/vendor/ramsey/collection" />
-      <path value="$PROJECT_DIR$/backend/vendor/ramsey/uuid" />
-      <path value="$PROJECT_DIR$/backend/vendor/vlucas/phpdotenv" />
-      <path value="$PROJECT_DIR$/backend/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/backend/vendor/laravel/lumen-framework" />
       <path value="$PROJECT_DIR$/backend/vendor/mockery/mockery" />
       <path value="$PROJECT_DIR$/backend/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/backend/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/backend/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/backend/vendor/nikic/fast-route" />
+      <path value="$PROJECT_DIR$/backend/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/backend/vendor/opis/closure" />
       <path value="$PROJECT_DIR$/backend/vendor/phar-io/manifest" />
       <path value="$PROJECT_DIR$/backend/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/backend/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/backend/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/backend/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/backend/vendor/phpoption/phpoption" />
       <path value="$PROJECT_DIR$/backend/vendor/phpspec/prophecy" />
       <path value="$PROJECT_DIR$/backend/vendor/phpunit/php-code-coverage" />
       <path value="$PROJECT_DIR$/backend/vendor/phpunit/php-file-iterator" />
@@ -177,31 +156,26 @@
       <path value="$PROJECT_DIR$/backend/vendor/phpunit/php-text-template" />
       <path value="$PROJECT_DIR$/backend/vendor/phpunit/php-timer" />
       <path value="$PROJECT_DIR$/backend/vendor/phpunit/phpunit" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/deprecation-contracts" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/error-handler" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/event-dispatcher" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/event-dispatcher-contracts" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/http-client-contracts" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/http-foundation" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/http-kernel" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/mime" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-intl-grapheme" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-intl-idn" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-intl-normalizer" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php72" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php73" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php80" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/process" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/string" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/var-dumper" />
-      <path value="$PROJECT_DIR$/backend/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/backend/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/backend/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/backend/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/backend/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/backend/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/backend/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/backend/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/backend/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/backend/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/backend/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/backend/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/backend/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/backend/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/backend/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/backend/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/backend/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/backend/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/backend/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/backend/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/backend/vendor/sebastian/resource-operations" />
     </include_path>
   </component>
   <component name="ProjectId" id="1oFfxKQSwfvf2BINVJaaT29XpQE" />
@@ -216,7 +190,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../MiSDK" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -254,6 +228,7 @@
       <workItem from="1613310800190" duration="1830000" />
       <workItem from="1613562919677" duration="57000" />
       <workItem from="1613562996581" duration="1910000" />
+      <workItem from="1614532601356" duration="62000" />
     </task>
     <servers />
   </component>

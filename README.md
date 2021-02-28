@@ -6,7 +6,7 @@
 ## First of all
 Download this repository, has a frontend and backend folder
 
-## Backend
+## Backend-Laravel
 Go to the backend folder with your favourite ide and type in terminal
 ```
 composer install
@@ -41,21 +41,21 @@ php -S yourIp:8000 -t ./public
 Go to the frontend folder and open it with your IDE, must to go to the following route\
 and make some changes.
 ```
-app/java/com.example.frontend.controller \
+app/java/com.example.frontend.controller 
 io.ServiceSingleton
 ```
 The change must to change is baseUrl with youp IpAdress:8000/api/
 
 Another change is in route
 ```
-app/java/com.example.frontend.controller \
+app/java/com.example.frontend.controller 
 ui.CreateReservaActivity
 ```
 Near Line 33 in getZone() change url with youp IpAdress:8000/img/
 
 Another change is in route
 ```
-app/java/com.example.frontend.controller \
+app/java/com.example.frontend.controller 
 ui.WebView
 ```
 In line 14, change the url with youp IpAdress:8000/help
