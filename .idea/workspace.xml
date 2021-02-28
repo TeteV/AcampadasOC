@@ -20,18 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fb85044-f59d-476d-b07e-44128cfe35d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_02_2021_18_42_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_02_2021_18_42__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-laravel/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-laravel/.idea/backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backend-laravel/.idea/backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-laravel/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend-laravel/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend-laravel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend-laravel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-laravel/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend-laravel/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-laravel/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/backend-laravel/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend-laravel/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend-laravel/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/io/ServiceSingleton.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/io/ServiceSingleton.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +220,9 @@
       <workItem from="1613310800190" duration="1830000" />
       <workItem from="1613562919677" duration="57000" />
       <workItem from="1613562996581" duration="1910000" />
-      <workItem from="1614532601356" duration="62000" />
+      <workItem from="1614532601356" duration="710000" />
+      <workItem from="1614538348288" duration="66000" />
+      <workItem from="1614539329975" duration="207000" />
     </task>
     <servers />
   </component>

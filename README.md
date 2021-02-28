@@ -36,6 +36,19 @@ This is for start the local server in your PC
 php -S yourIp:8000 -t ./public
 ```
 
+If you want to use reports must do this changes, go to routes/api
+and  in aprox line 80
+```
+'db_connection' => [
+            'driver' => 'mysql', //mysql, ....
+            'username' => 'YOURDBUSERNAME',
+            'password' => 'YOURDBPASSWORD',
+            'host' => '127.0.0.1',
+            'database' => 'YOURDBNAME',
+            'port' => '3306'
+        ]
+```
+
 ## Frontend
 
 Go to the frontend folder and open it with your IDE, must to go to the following route\

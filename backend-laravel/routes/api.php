@@ -58,7 +58,7 @@ Route::post('/reservaCreate', [ReservaController::class, 'createPost']);
 
 Route::get('/compilarReporteParametros', function () {
     $input = base_path() .
-        '/vendor/geekcom/phpjasper/examples/zonasAca.jrxml';
+        '/public/reports/zonasAca.jrxml';
 
     $jasper = new PHPJasper;
     $jasper->compile($input)->execute();
@@ -71,9 +71,9 @@ Route::get('/compilarReporteParametros', function () {
 
 Route::get('/reporteParametros', function () {
     $input = base_path() .
-        '/vendor/geekcom/phpjasper/examples/zonasAca.jasper';
+        '/public/reports/zonasAca.jasper';
     $output = base_path() .
-        '/vendor/geekcom/phpjasper/examples';
+        '/public/reports';
     $options = [
         'format' => ['pdf'],
         'params' => [],
@@ -96,6 +96,6 @@ Route::get('/reporteParametros', function () {
     )->execute();
 
     $pathToFile = base_path() .
-        '/vendor/geekcom/phpjasper/examples/zonasAca.pdf';
+        '/public/reports/zonasAca.pdf';
     return response()->file($pathToFile);
 });
