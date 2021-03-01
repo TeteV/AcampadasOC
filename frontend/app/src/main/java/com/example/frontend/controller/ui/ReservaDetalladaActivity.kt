@@ -70,7 +70,8 @@ class ReservaDetalladaActivity : AppCompatActivity() {
         val bicycleServiceImpl = ServiceImpl()
         bicycleServiceImpl.getZoneById(this, zoneId) { response ->
             run {
-                val url = "http://192.168.56.1:8000/img/"
+                //val url = "http://192.168.56.1:8000/img/"
+                val url = "http://192.168.1.129:8000/img/"
                 val localizacion: TextView = findViewById(R.id.localization)
                 val name: TextView = findViewById(R.id.name)
                 val roomImg: ImageView = findViewById(R.id.bg)

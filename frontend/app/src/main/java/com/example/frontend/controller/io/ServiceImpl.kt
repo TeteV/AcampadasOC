@@ -402,7 +402,7 @@ class ServiceImpl: IVolleyService {
     }
 
     override fun getReporte(context: Context, completionHandler: (response: String) -> Unit) {
-        val path = ServiceSingleton.getInstance(context).baseUrl + "compilarReporteParametros"
+        val path = ServiceSingleton.getInstance(context).baseUrl + "reporteParametros"
         val arrayRequest = JsonArrayRequest(Request.Method.GET, path, null,
             { response ->
                 val value = "status: "

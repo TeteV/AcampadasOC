@@ -93,7 +93,8 @@ class PDFView : AppCompatActivity() {
     }
 
     private fun startDownloading() {
-        val url = "http://192.168.56.1:8000/reports/zonasAca.pdf";
+       //val url = "http://192.168.56.1:8000/reports/zonasAca.pdf";
+        val url = "http://192.168.1.129:8000/reports/zonasAca.pdf";
         val request = DownloadManager.Request(Uri.parse(url))
         request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI or DownloadManager.Request.NETWORK_MOBILE)
         Toast.makeText(this, "The file is downloading...", Toast.LENGTH_LONG).show()

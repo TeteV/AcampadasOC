@@ -9,11 +9,11 @@ import com.android.volley.toolbox.ImageLoader
 import com.android.volley.toolbox.Volley
 
 class ServiceSingleton constructor(context: Context) {
-    val baseUrl = "http://192.168.56.1:8000/api/"
+    //val baseUrl = "http://192.168.56.1:8000/api/"
     //val baseUrl = "http://192.168.1.54:8000/api/"
 
     //val baseUrl = "http://192.168.56.1:8000/api/"
-    //val baseUrl = "http://192.168.1.129:8000/api/"
+    val baseUrl = "http://192.168.1.129:8000/api/"
 
     companion object {
         @Volatile
