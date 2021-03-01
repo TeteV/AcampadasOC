@@ -21,9 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fb85044-f59d-476d-b07e-44128cfe35d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend-laravel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend-laravel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-laravel/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend-laravel/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +220,7 @@
       <workItem from="1613562996581" duration="1910000" />
       <workItem from="1614532601356" duration="710000" />
       <workItem from="1614538348288" duration="66000" />
-      <workItem from="1614539329975" duration="207000" />
+      <workItem from="1614539329975" duration="858000" />
     </task>
     <servers />
   </component>
