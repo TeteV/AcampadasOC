@@ -1,11 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e9cdc563-b1f3-42f5-9ea5-adeb49971fd5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/reports/zonasAca.jasper" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/example/frontend/controller/io/IVolleyService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/example/frontend/controller/io/IVolleyService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/example/frontend/controller/io/ServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/example/frontend/controller/io/ServiceImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/example/frontend/controller/io/ServiceSingleton.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/example/frontend/controller/io/ServiceSingleton.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/example/frontend/controller/ui/UserProfileActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/example/frontend/controller/ui/UserProfileActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/activity_user_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/activity_user_profile.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +186,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -198,7 +227,10 @@
       <workItem from="1614516477333" duration="1315000" />
       <workItem from="1614527339988" duration="101000" />
       <workItem from="1614530294740" duration="2282000" />
-      <workItem from="1614538415598" duration="1001000" />
+      <workItem from="1614538415598" duration="1306000" />
+      <workItem from="1614541153306" duration="55000" />
+      <workItem from="1614541219903" duration="5705000" />
+      <workItem from="1614596360683" duration="694000" />
     </task>
     <servers />
   </component>
@@ -216,5 +248,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1091" y="295" key="FileChooserDialogImpl" timestamp="1614541202275">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state x="1091" y="295" key="FileChooserDialogImpl/62.0.2498.1080@62.0.2498.1080" timestamp="1614541202275" />
   </component>
 </project>

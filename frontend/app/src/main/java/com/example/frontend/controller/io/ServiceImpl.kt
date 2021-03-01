@@ -15,6 +15,7 @@ import com.example.frontend.controller.models.Persona
 import com.example.frontend.controller.models.Reserva
 
 import org.json.JSONArray
+import java.lang.StringBuilder
 
 class ServiceImpl: IVolleyService {
 
@@ -399,4 +400,18 @@ class ServiceImpl: IVolleyService {
                 })
         ServiceSingleton.getInstance(context).addToRequestQueue(objectRequest)
     }
+
+    override fun getReporte(context: Context, completionHandler: (response: String) -> Unit) {
+        val path = ServiceSingleton.getInstance(context).baseUrl + "compilarReporteParametros"
+        val arrayRequest = JsonArrayRequest(Request.Method.GET, path, null,
+            { response ->
+                val value = "status: "
+                completionHandler(value)
+            },
+            { error ->
+                completionHandler("dasdsa")
+            })
+        ServiceSingleton.getInstance(context).addToRequestQueue(arrayRequest)
+    }
+
 }

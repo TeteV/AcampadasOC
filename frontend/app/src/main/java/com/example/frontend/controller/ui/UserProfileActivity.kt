@@ -12,13 +12,13 @@ import com.example.frontend.R
 import com.example.frontend.controller.io.ServiceImpl
 import com.example.frontend.controller.models.Operario
 import com.example.frontend.controller.util.PreferenceHelper
+import kotlinx.android.synthetic.main.activity_user_profile.*
 
 class UserProfileActivity : AppCompatActivity() {
 
     private val preferences by lazy {
         PreferenceHelper.defaultPrefs(this)
     }
-    
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +31,12 @@ class UserProfileActivity : AppCompatActivity() {
     }
 
     private fun listeners() {
+        button_reportes.setOnClickListener {
+            val intent = Intent(this, PDFView::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+        }
+
         val logoutBtn = findViewById<Button>(R.id.logoutBtn)
         logoutBtn.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
