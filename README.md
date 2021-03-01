@@ -81,7 +81,7 @@ and the emulator starts running
 The data model follows the following description or structure:
 
 ### Entity Relationship
-![Image text](https://github.com/TeteV/AcampadasOC/tree/develop/Docs/utils/ER.png)
+![Image text](https://github.com/TeteV/AcampadasOC/blob/develop/Docs/utils/ER.PNG)
 
 ### Model Relationship
 ![Image text](https://github.com/TeteV/AcampadasOC/blob/develop/Docs/utils/Modelo%20de%20datos.PNG)
