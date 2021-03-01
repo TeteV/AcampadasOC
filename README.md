@@ -77,8 +77,6 @@ In line 14, change the url with youp IpAdress:8000/help
 Once in the backend folder your server is ON, you can press the play ▶️ button (AndroidStudio)
 and the emulator starts running
 
-# Aditional content
-once the app is running you must to create an account and login to enjoy it
 
 ### Usability
 
@@ -101,6 +99,9 @@ Among the elements that I have taken into account when trying to create a design
   * **Interactive elements:** In the prototype you will find the buttons as interactive elements, in each of the majority of windows, in some, they will be a button to complete the reservas search, in others they will be arrows to move between elements of a slideshow, or in another to display the menu.
 
 * **Data presentation:** In this case, when talking about the presentation of data, I think I should emphasize precisely the last window, which is where I specify information about the reservations, there what I do is precisely divide the content into different sections, from the location of said reservation, a brief description of how many people are going, how many cars are going to be used, etc.
+
+# Aditional content
+once the app is running you must to create an account and login to enjoy it
 
 ## Made with
 [Php Storm](https://www.jetbrains.com/es-es/phpstorm/) Website.\
