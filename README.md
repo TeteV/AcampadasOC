@@ -80,6 +80,28 @@ and the emulator starts running
 # Aditional content
 once the app is running you must to create an account and login to enjoy it
 
+### Usability
+
+When we design multiplatform applications, the interface that we propose will be essential for the user to feel comfortable working with it. Bad design can cause customers to leave our application.
+
+Within the context of computer applications and software development, usability is defined as the discipline that studies how to design websites and applications so that users can interact with them in the easiest, most comfortable and most intuitive way possible.
+
+Among the elements that I have taken into account when trying to create a design as legible as possible and that does not provide any kind of difficulty or deficiency when interpreting its content, they have been:
+  
+* **Colors:** Among the colors that I have used in this design we find:
+  * **#F5F6FC:** I have used this color mainly for the use of small details, such as some buttons, or in case you want to highlight small elements or icons.
+  * **#00BCAA:** I have used it for the subject of titles, subtitles and some other elements in which I used it to create contrast. 
+  * **#024341:** I use them mainly to create a gradient in the background of many of the windows of my interface or prototype.
+  * **#F4765B:** I use it to create a little contrast between the text in that window, when the background is starring an image.
+  
+* **Typography:** The fonts I have used are:
+  * **Ubuntu:** I use it for the titles of most items.
+  * **Quicksand:** I use this typeface mainly for the description inside the rooms or for elements such as reviews. Also, he used different weights within it from "Light", "Regular" and "Medium".
+  
+  * **Interactive elements:** In the prototype you will find the buttons as interactive elements, in each of the majority of windows, in some, they will be a button to complete the reservas search, in others they will be arrows to move between elements of a slideshow, or in another to display the menu.
+
+* **Data presentation:** In this case, when talking about the presentation of data, I think I should emphasize precisely the last window, which is where I specify information about the reservations, there what I do is precisely divide the content into different sections, from the location of said reservation, a brief description of how many people are going, how many cars are going to be used, etc.
+
 ## Made with
 [Php Storm](https://www.jetbrains.com/es-es/phpstorm/) Website.\
 [Android Studio](https://developer.android.com/studio) Website.
