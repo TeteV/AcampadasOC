@@ -11,6 +11,8 @@ interface IVolleyService {
 
     fun getAll(context: Context, completionHandler: (response: ArrayList<Zone>?) -> Unit)
 
+    fun getReporte(context: Context, completionHandler: (response: String) -> Unit)
+
     fun getZoneById(context: Context, zoneId: Int, completionHandler: (response: Zone?) -> Unit)
 
     fun getBookingById(context: Context, zoneId: Int, completionHandler: (response: Reserva?) -> Unit)

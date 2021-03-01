@@ -68,6 +68,10 @@ dependencies {
     implementation 'com.squareup.moshi:moshi:1.9.2'
     kapt 'com.squareup.moshi:moshi-kotlin-codegen:1.9.2'
 
+    // PDFs View
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    implementation 'com.mindorks.android:prdownloader:0.6.0'
+
     //This 2 is for QR code
     implementation 'com.google.zxing:core:3.4.0'
     implementation ('com.journeyapps:zxing-android-embedded:4.1.0') {transitive=false}

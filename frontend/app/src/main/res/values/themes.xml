@@ -17,4 +17,12 @@
     <style name="DataPicker1" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorAccent">@color/dark_green</item>
     </style>
+
+    <style name="normalTheme" parent="Theme.AppCompat.NoActionBar">
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+
 </resources>
