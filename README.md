@@ -84,7 +84,7 @@ The data model follows the following description or structure:
 ![Image text](https://github.com/TeteV/AcampadasOC/tree/develop/Docs/utils/ER.png)
 
 ### Model Relationship
-<[Image text](https://github.com/TeteV/AcampadasOC/blob/develop/Docs/utils/Modelo%20de%20datos.PNG)
+![Image text](https://github.com/TeteV/AcampadasOC/blob/develop/Docs/utils/Modelo%20de%20datos.PNG)
 
 * **Operarios Table:** This table will be where we find the operarios.
   * **Id**
