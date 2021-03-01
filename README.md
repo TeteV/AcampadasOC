@@ -77,8 +77,41 @@ In line 14, change the url with youp IpAdress:8000/help
 Once in the backend folder your server is ON, you can press the play ▶️ button (AndroidStudio)
 and the emulator starts running
 
+## Data model
+The data model follows the following description or structure:
 
-### Usability
+* **Operarios Table:** This table will be where we find the operarios.
+  * **Id**
+  * **Dni**
+  * **Nombre**
+  * **Email**
+  * **Password**
+  
+* **Zones Table:** This table will be where we find the data that the users of the zones see.
+  * **Id:** Zone id
+  * **Nombre:** Zone name
+  * **Localization:** Zone localization
+  * **Url_img:** Zone image
+  
+* **Bookings Table:** This table will be where we will find the data that you will have to give to develop the reservation.
+  * **id_persona:** Id person (FK room table)
+  * **Check_out** Check out
+  * **Check_in:** Check in
+  * **Localizador_reserva** Id
+  * **num_personas** Number of persons
+  * **num_vehiculos** Number of vehicules
+  * **checkin** Id of the reserved room (FK room table)
+  * **fecha_checkin** Date of the checkin
+  * **id_zona** Id of the reserved zone (FK room table)
+
+* **Persons Table:** This table will be where we will find the data of persons.
+  * **id:** Id person
+  * **Nombre** Check out
+  * **Apellidos:** Check in
+  * **Dni** Id
+  * **Url_img** Zone person
+
+## Usability
 
 When we design multiplatform applications, the interface that we propose will be essential for the user to feel comfortable working with it. Bad design can cause customers to leave our application.
 
