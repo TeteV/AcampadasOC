@@ -135,15 +135,15 @@ The user requirements can be defined as follows:
   * **R5.3.** If you click on the grey button you will get a report.  
   * **R5.4.** If you click on the grey button you will delete the user.
 * **R6.** Once inside the sale of the list, you will be able to:
-  * **R6.1. ** filter by locator with top input-
-  * **R6.2. ** You will be able to filter date by the lower input
-  * **R6.3. ** If you click on a reservation you will see the reservations in detail.
-  * **R6.4. ** You can filter date by lower input
-* **R7. ** Once inside the sale of the detailed reservation, you will be able to:
-  * **R7.1. ** See the data in more detail
-  * **R7.2. ** Delete said reservation
-  * **R7.3. ** You can update it with new data from the form that appears.
-  * **R7.4. ** You can check-in.
+  * **R6.1.** filter by locator with top input-
+  * **R6.2.** You will be able to filter date by the lower input
+  * **R6.3.** If you click on a reservation you will see the reservations in detail.
+  * **R6.4.** You can filter date by lower input
+* **R7.** Once inside the sale of the detailed reservation, you will be able to:
+  * **R7.1.** See the data in more detail
+  * **R7.2.** Delete said reservation
+  * **R7.3.** You can update it with new data from the form that appears.
+  * **R7.4.** You can check-in.
 
 
 ## Usability
