@@ -80,12 +80,6 @@ and the emulator starts running
 ## Data model
 The data model follows the following description or structure:
 
-### Entity Relationship
-![Image text](https://github.com/TeteV/AcampadasOC/tree/develop/Docs/utils/ER.png)
-
-### Model Relationship
-<[Image text](https://github.com/TeteV/AcampadasOC/blob/develop/Docs/utils/Modelo%20de%20datos.PNG)
-
 * **Operarios Table:** This table will be where we find the operarios.
   * **Id**
   * **Dni**
@@ -116,6 +110,41 @@ The data model follows the following description or structure:
   * **Apellidos:** Check in
   * **Dni** Id
   * **Url_img** Zone person
+
+### Entity Relationship
+![Image text](https://github.com/TeteV/AcampadasOC/blob/develop/Docs/utils/ER.PNG)
+
+### Model Relationship
+![Image text](https://github.com/TeteV/AcampadasOC/blob/develop/Docs/utils/Modelo%20de%20datos.PNG)
+
+## User requirements
+The user requirements can be defined as follows:
+* **R1.** Platform.
+    * **R1.1.** The app that we will make will be for Mobile.
+    * **R1.2.** There is no previous application to take references.
+* **R2.** Only the functions that are broken down from the three cruds performed in the app will be implemented.
+* **R3.** Users will have to access by registering, providing their name, dni email and password.
+* **R4.** Once inside the main activity, they will be able to direct the different ones.
+
+  * **R4.1.** User can access QR viewer.
+  * **R4.2.** The user can access the user's profile by clicking on the upper right image.
+  * **R4.3.** If you click on any of the zones you will go to list it in detail.
+* **R5.** Once inside the part of the user's profile you can contemplate the following possibilities:
+  * **R5.2.** The user will be able to logout, by clicking on the orange buttont.
+  * **R5.2.** If you click on the one in the blue button, you can go to the user's edition.
+  * **R5.3.** If you click on the grey button you will get a report.  
+  * **R5.4.** If you click on the grey button you will delete the user.
+* **R6.** Once inside the sale of the list, you will be able to:
+  * **R6.1.** filter by locator with top input-
+  * **R6.2.** You will be able to filter date by the lower input
+  * **R6.3.** If you click on a reservation you will see the reservations in detail.
+  * **R6.4.** You can filter date by lower input
+* **R7.** Once inside the sale of the detailed reservation, you will be able to:
+  * **R7.1.** See the data in more detail
+  * **R7.2.** Delete said reservation
+  * **R7.3.** You can update it with new data from the form that appears.
+  * **R7.4.** You can check-in.
+
 
 ## Usability
 
