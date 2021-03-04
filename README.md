@@ -145,6 +145,12 @@ The user requirements can be defined as follows:
   * **R7.3.** You can update it with new data from the form that appears.
   * **R7.4.** You can check-in.
 
+## User manual
+[User Manual](https://github.com/TeteV/AcampadasOC/blob/develop/Docs/User_Manual.pdf)
+
+## Prototype Guide
+[Prototype Guide](https://github.com/TeteV/AcampadasOC/blob/develop/Docs/Prototype_Guide.pdf)
+
 
 ## Usability
 
