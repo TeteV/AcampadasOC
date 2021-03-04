@@ -54,21 +54,20 @@ class ZoneActivity : AppCompatActivity() {
 
         val num : Int = this.intent.getIntExtra("num",0)
 
-        val tokenGE : String = this.intent.getStringExtra("api_token").toString()
+        val tokenGE : String? = this.intent.getStringExtra("api_token")
         val opeIdGE : String = this.intent.getStringExtra("opeId").toString()
-        Log.v("ZoneActiGE",opeIdGE)
-        Log.v("ZoneActiEG",tokenGE)
-        Log.v("ZoneActiNumEG", num.toString())
+        Log.v("ZoneActi GetEx: ",opeIdGE)
+        Log.v("ZoneActi GetEx: ",tokenGE.toString())
 
         if (num==1){
             Log.v("Create Pref","Create Pref")
-            createSessionPreference(tokenGE, opeIdGE.toInt())
+            createSessionPreference(tokenGE.toString(), opeIdGE.toInt())
         }
 
         val opeIdPref = preferences.getInt("opeId", 0)
-        val tokenPref = preferences.getString("token", null)
-        Log.v("ZoneActi ID pref", opeIdPref.toString())
-        Log.v("ZoneActi token pref",tokenPref.toString())
+        val tokenPref = preferences.getString("tokenPref", null)
+        Log.v("ZoneActi ID pref: ", opeIdPref.toString())
+        Log.v("ZoneActi token pref: ",tokenPref.toString())
 
         getAllRooms()
         listeners()
