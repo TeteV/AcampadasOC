@@ -160,7 +160,7 @@ class ListActivity : AppCompatActivity() {
         val bicycleServiceImpl = ServiceImpl()
         bicycleServiceImpl.getZoneById(this, zoneId) { response ->
             run {
-                val url = "http://192.168.56.1:8000/img/"
+                val url = "http://192.168.1.129:8000/img/"
                 val imageUrl = url + response?.url_img + ".jpg"
                 Picasso.with(this).load(imageUrl).into(bg_lists);
             }

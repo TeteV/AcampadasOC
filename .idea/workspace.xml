@@ -21,8 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0fb85044-f59d-476d-b07e-44128cfe35d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-laravel/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend-laravel/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/ZoneActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/ZoneActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/CreateReservaActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/CreateReservaActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/HomeActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/ListActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/ListActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/ReservaDetalladaActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/ReservaDetalladaActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/WebView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/src/main/java/com/example/frontend/controller/ui/WebView.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +228,10 @@
       <workItem from="1614618394068" duration="1660000" />
       <workItem from="1614786317030" duration="931000" />
       <workItem from="1614861688094" duration="661000" />
-      <workItem from="1614872272469" duration="1647000" />
+      <workItem from="1614872272469" duration="2376000" />
+      <workItem from="1614884925275" duration="2238000" />
+      <workItem from="1615217881531" duration="50000" />
+      <workItem from="1615229710330" duration="2056000" />
     </task>
     <servers />
   </component>

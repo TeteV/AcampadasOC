@@ -155,7 +155,7 @@ class HomeActivity : AppCompatActivity() {
 
     companion object {
         /*const val WEB_SOCKET_URL = "wss://ws-feed.pro.coinbase.com"*/
-        const val WEB_SOCKET_URL = "ws://192.168.56.1:6001/app/12345asdfasdf?protocol=7&client=js&version=4.3.1&flash=false"
+        const val WEB_SOCKET_URL = "ws://192.168.1.129:6001/app/12345asdfasdf?protocol=7&client=js&version=4.3.1&flash=false"
         const val TAG = "Tiburcio"
     }
 

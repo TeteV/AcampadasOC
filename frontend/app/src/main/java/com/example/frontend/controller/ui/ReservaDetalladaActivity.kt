@@ -112,7 +112,7 @@ class ReservaDetalladaActivity : AppCompatActivity() {
         val serviceImpl = ServiceImpl()
         serviceImpl.getPersonById(this, userId) { response ->
             run {
-                val url = "http://192.168.56.1:8000/img/"
+                val url = "http://192.168.1.129:8000/img/"
                 val imagePerson: ImageView = findViewById(R.id.imagenPerfilReserva)
                 val personNameTV: TextView= findViewById(R.id.textViewNameDude)
                 val personNamePUT = this.intent.getStringExtra("personName").toString()
