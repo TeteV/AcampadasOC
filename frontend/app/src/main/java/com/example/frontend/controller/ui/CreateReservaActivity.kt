@@ -30,7 +30,7 @@ class CreateReservaActivity : AppCompatActivity() {
         val bicycleServiceImpl = ServiceImpl()
         bicycleServiceImpl.getZoneById(this, zoneId) { response ->
             run {
-                val url = "http://192.168.1.129:8000/img/"
+                val url = "https://cryptic-dawn-95434.herokuapp.com/img/"
                 val roomImg: ImageView = findViewById(R.id.bg_update)
                 val imageUrl = url + response?.url_img + ".jpg"
 

@@ -13,7 +13,7 @@ class ServiceSingleton constructor(context: Context) {
     //val baseUrl = "http://192.168.1.54:8000/api/"
 
     //val baseUrl = "http://192.168.56.1:8000/api/"
-    val baseUrl = "http://192.168.1.129:8000/api/"
+    val baseUrl = "https://cryptic-dawn-95434.herokuapp.com/api/"
 
     companion object {
         @Volatile

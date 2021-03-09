@@ -68,7 +68,7 @@ class UpdateZoneActivity : AppCompatActivity() {
         bicycleServiceImpl.getZoneById(this, zoneId) { response ->
             run {
                 //val url = "http://192.168.56.1:8000/img/"
-                val url = "http://192.168.1.129:8000/img/"
+                val url = "https://cryptic-dawn-95434.herokuapp.com/img/"
                 val imageUrl = url + response?.url_img + ".jpg"
                 Picasso.with(this).load(imageUrl).into(bg_lists);
                 editTextZona2.setText(response?.nombre.toString() ?: "")
